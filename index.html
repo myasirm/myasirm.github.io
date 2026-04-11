@@ -3,168 +3,101 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Italian Haven Consultation</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+body { margin:0; font-family:'Poppins', sans-serif; }
 
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  color: #333;
+nav {
+  background:#0a2540;
+  padding:15px;
+  text-align:center;
+}
+nav a {
+  color:white;
+  margin:0 15px;
+  text-decoration:none;
+  font-weight:600;
 }
 
 header {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
-  url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 1.2em;
+  background:url('https://images.unsplash.com/photo-1603565816030-6b389eeb23cb') center/cover;
+  color:white;
+  height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
 }
 
 section {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: auto;
+  padding:60px 20px;
+  max-width:1000px;
+  margin:auto;
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 30px;
+.images {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
 }
 
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.service-box {
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.service-box:hover {
-  transform: translateY(-5px);
-}
-
-.about {
-  text-align: center;
-  max-width: 800px;
-  margin: auto;
-}
-
-.cta {
-  background: #0a2540;
-  color: white;
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.cta button {
-  padding: 12px 25px;
-  border: none;
-  background: #fff;
-  color: #0a2540;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
+.images img {
+  width:100%;
+  border-radius:10px;
 }
 
 footer {
-  background: #111;
-  color: white;
-  text-align: center;
-  padding: 20px;
+  background:#111;
+  color:white;
+  text-align:center;
+  padding:20px;
 }
-
 </style>
-
 </head>
-<!-- WhatsApp Button -->
-<a href="https://wa.me/393510578614" target="_blank" style="
-position: fixed;
-bottom: 20px;
-right: 20px;
-background-color: #25D366;
-color: white;
-padding: 15px 18px;
-border-radius: 50px;
-font-size: 18px;
-text-decoration: none;
-box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-z-index: 1000;
-">
-💬 WhatsApp
-</a>
+
 <body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="services.html">Our Services</a>
+</nav>
 
 <header>
   <div>
     <h1>Italian Haven Consultation</h1>
-    <p>Your trusted partner for starting a new life in Italy</p>
+    <p>Your gateway to a new life in Puglia</p>
   </div>
 </header>
 
-<section class="about">
-  <h2>My Story</h2>
+<section>
+  <h2>Welcome</h2>
   <p>
-  Italian Haven Consultation was born from a simple yet powerful idea: to make life easier for foreigners who dream of living in Italy but struggle to find the right guidance.
-  </p>
-
-  <p>
-  My name is Yasir. Originally from Pakistan, raised in the United Kingdom, and now living in Italy for over 15 years.
-  </p>
-
-  <p>
-  With deep local knowledge and real experience, I help individuals and families navigate immigration, property, and life in Italy with confidence.
+  Helping foreigners relocate, invest, and live comfortably in Southern Italy.
   </p>
 </section>
 
 <section>
-  <h2>Our Services</h2>
+  <h2>Discover Puglia</h2>
 
-  <div class="services">
-    <div class="service-box">Immigration & Documentation Support</div>
-    <div class="service-box">Property Search & Management</div>
-    <div class="service-box">Relocation Assistance</div>
-    <div class="service-box">Interior Design Consultation</div>
+  <div class="images">
+    <img src="https://images.unsplash.com/photo-1543349689-9a4d426bee8e">
+    <img src="https://images.unsplash.com/photo-1590595906941-81f6e47b2a5d">
+    <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad">
   </div>
-
 </section>
 
-<section class="cta">
-  <h2>Start Your Journey Today</h2>
-  <p>Let us guide you step by step into your new life in Italy.</p>
+<footer>
+  <p>© 2026 Italian Haven Consultation</p>
+</footer>
 
-  <p>
-    📧 <a href="mailto:mumtaz.yasir.m@gmail.com" style="color:white;">
-    mumtaz.yasir.m@gmail.com
-    </a>
-  </p>
+<!-- WhatsApp -->
+<a href="https://wa.me/393510578614?text=Hello%20I%20am%20interested%20in%20your%20services" 
+style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px;border-radius:50px;text-decoration:none;">
+💬
+</a>
 
-  <p>
-    📱 <a href="https://wa.me/393510578614?text=Hello%20I%20am%20interested%20in%20your%20services" style="color:white;">
-    Chat on WhatsApp
-    </a>
-  </p>
-
-</section>
+</body>
+</html>
