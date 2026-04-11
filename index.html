@@ -3,45 +3,99 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Italian Haven Consultation</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
+
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
 }
 
 header {
-  background: #0a2540;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
+  url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34');
+  background-size: cover;
+  background-position: center;
   color: white;
-  padding: 60px 20px;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
+header h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+}
+
 section {
-  padding: 40px 20px;
-  max-width: 900px;
+  padding: 60px 20px;
+  max-width: 1000px;
   margin: auto;
 }
 
-h1, h2 {
-  margin-bottom: 15px;
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-.services div {
-  background: #f4f4f4;
-  padding: 15px;
-  margin: 10px 0;
-  border-radius: 8px;
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.service-box {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+}
+
+.about {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.cta {
+  background: #0a2540;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.cta button {
+  padding: 12px 25px;
+  border: none;
+  background: #fff;
+  color: #0a2540;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 footer {
-  background: #0a2540;
+  background: #111;
   color: white;
   text-align: center;
   padding: 20px;
 }
+
 </style>
 
 </head>
@@ -49,47 +103,43 @@ footer {
 <body>
 
 <header>
-  <h1>Italian Haven Consultation</h1>
-  <p>Your trusted partner for starting a new life in Italy</p>
+  <div>
+    <h1>Italian Haven Consultation</h1>
+    <p>Your trusted partner for starting a new life in Italy</p>
+  </div>
 </header>
 
-<section>
+<section class="about">
   <h2>My Story</h2>
   <p>
   Italian Haven Consultation was born from a simple yet powerful idea: to make life easier for foreigners who dream of living in Italy but struggle to find the right guidance.
   </p>
 
   <p>
-  My name is Yasir. Originally from Pakistan, I was raised and educated in the United Kingdom, graduating from Coventry University. After completing my studies, I moved to Italy, where I have been living and working for over 15 years.
+  My name is Yasir. Originally from Pakistan, raised in the United Kingdom, and now living in Italy for over 15 years.
   </p>
 
   <p>
-  Over the years, I’ve helped many individuals and families navigate immigration, property, and settling into Italian life.
+  With deep local knowledge and real experience, I help individuals and families navigate immigration, property, and life in Italy with confidence.
   </p>
 </section>
 
-<section class="services">
+<section>
   <h2>Our Services</h2>
 
-  <div>Immigration guidance & documentation</div>
-  <div>Property search & management</div>
-  <div>Relocation support</div>
-  <div>Interior design consultation</div>
+  <div class="services">
+    <div class="service-box">Immigration & Documentation Support</div>
+    <div class="service-box">Property Search & Management</div>
+    <div class="service-box">Relocation Assistance</div>
+    <div class="service-box">Interior Design Consultation</div>
+  </div>
 
 </section>
 
-<section>
-  <h2>Our Mission</h2>
-  <p>Empowering you to thrive in your Italian journey.</p>
-
-  <h2>Our Vision</h2>
-  <p>Creating seamless experiences for every client.</p>
-</section>
-
-<section>
-  <h2>Contact</h2>
-  <p>Email: your@email.com</p>
-  <p>Phone: +39 XXX XXX XXXX</p>
+<section class="cta">
+  <h2>Start Your Journey Today</h2>
+  <p>Let us guide you step by step into your new life in Italy.</p>
+  <button>Contact Us</button>
 </section>
 
 <footer>
