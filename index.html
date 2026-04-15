@@ -39,9 +39,6 @@
       background: #1e2a2f;
       padding: 10px 0;
       text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 101;
     }
     .lang-btn {
       background: transparent;
@@ -65,7 +62,7 @@
       background: #ffffff;
       box-shadow: 0 8px 20px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.05);
       position: sticky;
-      top: 48px;
+      top: 0;
       z-index: 100;
       backdrop-filter: blur(2px);
       background: rgba(255,255,245,0.96);
@@ -277,7 +274,7 @@
       margin-top: 30px;
     }
     .gallery-item {
-      flex: 1 1 300px;
+      flex: 1 1 280px;
       border-radius: 24px;
       overflow: hidden;
       box-shadow: 0 12px 22px -8px rgba(0,0,0,0.12);
@@ -286,7 +283,7 @@
     }
     .gallery-item img {
       width: 100%;
-      height: 260px;
+      height: 240px;
       object-fit: cover;
       object-position: center;
       display: block;
@@ -298,9 +295,8 @@
     .caption {
       padding: 16px;
       text-align: center;
-      font-weight: 600;
+      font-weight: 500;
       background: white;
-      color: #2c3e2f;
     }
 
     .cta {
@@ -427,9 +423,6 @@
         min-height: 400px;
         background-size: contain;
       }
-      header {
-        top: 70px;
-      }
     }
   </style>
 </head>
@@ -497,7 +490,7 @@
     </div>
   </section>
 
-  <!-- Services Section - NOW WITH 5 SERVICES INCLUDING TRANSLATION -->
+  <!-- Services Section -->
   <section id="services" style="background: #faf7f2;">
     <div class="container">
       <div class="section-title"><span data-en="What we offer — Bespoke support for your Italian move" data-it="Cosa offriamo — Supporto su misura per il tuo trasferimento in Italia" data-fr="Ce que nous offrons — Un accompagnement sur mesure pour votre installation en Italie">What we offer — Bespoke support for your Italian move</span></div>
@@ -514,11 +507,6 @@
           <p><span data-en="Find your safe haven: from lease contracts to purchasing insights." data-it="Trova il tuo porto sicuro: dai contratti di locazione ai consigli per l'acquisto." data-fr="Trouvez votre havre de paix : des contrats de location aux conseils d'achat.">Find your safe haven: from lease contracts to purchasing insights.</span></p>
         </div>
         <div class="card">
-          <i class="fas fa-language"></i>
-          <h3><span data-en="Translation Services" data-it="Servizi di Traduzione" data-fr="Services de Traduction">Translation Services</span></h3>
-          <p><span data-en="Professional Italian ↔ English translation for documents, contracts, emails, and legal papers. Accurate, fast, and reliable." data-it="Traduzione professionale Italiano ↔ Inglese per documenti, contratti, email e documenti legali. Precisa, veloce e affidabile." data-fr="Traduction professionnelle Italien ↔ Anglais pour documents, contrats, e-mails et papiers légaux. Précise, rapide et fiable.">Professional Italian ↔ English translation for documents, contracts, emails, and legal papers. Accurate, fast, and reliable.</span></p>
-        </div>
-        <div class="card">
           <i class="fas fa-utensils"></i>
           <h3><span data-en="Cultural Integration" data-it="Integrazione Culturale" data-fr="Intégration culturelle">Cultural Integration</span></h3>
           <p><span data-en="Language tips, local etiquette, and authentic lifestyle immersion." data-it="Consigli linguistici, galateo locale e immersione nello stile di vita autentico." data-fr="Conseils linguistiques, étiquette locale et immersion dans un mode de vie authentique.">Language tips, local etiquette, and authentic lifestyle immersion.</span></p>
@@ -532,35 +520,47 @@
     </div>
   </section>
 
-  <!-- Gallery Section - HIGH QUALITY PUGLIA PHOTOS from Pexels -->
+  <!-- Gallery Section - YOUR PUGLIA PHOTOS -->
   <section id="gallery">
     <div class="container">
       <div class="section-title"><span data-en="Discover Puglia — where I call home" data-it="Scopri la Puglia — dove chiamo casa" data-fr="Découvrez les Pouilles — là où j'appelle maison">Discover Puglia — where I call home</span></div>
       <div class="section-sub"><span data-en="Explore the whitewashed streets, trulli, and Baroque beauty of Southern Italy" data-it="Esplora le strade imbiancate, i trulli e la bellezza barocca del Sud Italia" data-fr="Explorez les rues blanchies à la chaux, les trulli et la beauté baroque du sud de l'Italie">Explore the whitewashed streets, trulli, and Baroque beauty of Southern Italy</span></div>
       <div class="gallery">
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/14578437/pexels-photo-14578437.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=2" alt="Alberobello Trulli" loading="lazy">
-          <div class="caption">🏡 Alberobello — Famous Trulli Houses</div>
+          <img src="https://i.postimg.cc/m1TJ6LVv/alberobello.jpg" alt="Alberobello Trulli" loading="lazy">
+          <div class="caption">🏡 Alberobello — Trulli houses</div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=2" alt="Traditional Trulli Puglia" loading="lazy">
-          <div class="caption">✨ Traditional Trulli — Alberobello</div>
+          <img src="https://i.postimg.cc/MM7gDM05/cisternino.jpg" alt="Cisternino old town" loading="lazy">
+          <div class="caption">🏘️ Cisternino — Whitewashed charm</div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/15664501/pexels-photo-15664501.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=2" alt="Cisternino old town" loading="lazy">
-          <div class="caption">🏘️ Cisternino — Whitewashed Charm</div>
+          <img src="https://i.postimg.cc/bDx4TD01/cisternino-2.jpg" alt="Cisternino alley" loading="lazy">
+          <div class="caption">✨ Cisternino — Authentic Itria Valley</div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/14670196/pexels-photo-14670196.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=2" alt="Ostuni White City" loading="lazy">
+          <img src="https://i.postimg.cc/WFGxnFmX/fasano.jpg" alt="Fasano historic center" loading="lazy">
+          <div class="caption">🌳 Fasano — Historic charm</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.postimg.cc/G8F6Q8PM/fasano-(2).jpg" alt="Fasano countryside" loading="lazy" onerror="this.src='https://placehold.co/800x600/f3ede5/c97e2a?text=Fasano+Photo'">
+          <div class="caption">🌿 Fasano — Nature & tranquility</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.postimg.cc/ctd25xT5/lecce.jpg" alt="Lecce Baroque architecture" loading="lazy">
+          <div class="caption">🏛️ Lecce — Florence of the South</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.postimg.cc/Lgmw09vT/lecce-(1).jpg" alt="Lecce cathedral" loading="lazy">
+          <div class="caption">⛪ Lecce — Baroque masterpiece</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.postimg.cc/MfzNr6ts/ostuni.jpg" alt="Ostuni white city" loading="lazy">
           <div class="caption">🤍 Ostuni — The White City</div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/15063988/pexels-photo-15063988.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=2" alt="Fasano countryside" loading="lazy">
-          <div class="caption">🌳 Fasano — Historic Charm</div>
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/13958535/pexels-photo-13958535.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&dpr=2" alt="Lecce Baroque architecture" loading="lazy">
-          <div class="caption">🏛️ Lecce — Florence of the South</div>
+          <img src="https://i.postimg.cc/CnwX6hJr/ostuni2.jpg" alt="Ostuni panoramic view" loading="lazy">
+          <div class="caption">🌅 Ostuni — Panoramic views</div>
         </div>
       </div>
     </div>
