@@ -1,159 +1,84 @@
-<!DOCTYPE html>
+<!-- ONLY KEY PARTS SHOWN CLEANLY MERGED INTO YOUR ORIGINAL -->
 
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Italian Haven Consultation</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<!-- ✅ FIXED CSS -->
 
 <style>
-body {
-  font-family: 'Inter', sans-serif;
-  margin:0;
-  background:#fefcf8;
-  -webkit-font-smoothing: antialiased;
-}
+/* replace ONLY these parts inside your existing CSS */
 
-.container { max-width:1200px; margin:auto; padding:20px; }
-
-h1,h2,h3 { color:#2c3e2f; }
-
-.btn {
-  background:#c97e2a;
-  color:white;
-  padding:12px 25px;
-  border-radius:30px;
-  text-decoration:none;
-}
-
-.hero img {
-  width:100%;
-  border-radius:20px;
-}
-
-.gallery {
-  display:flex;
-  flex-wrap:wrap;
-  gap:20px;
-}
-
-.gallery-item {
-  flex:1 1 300px;
-  overflow:hidden;
-  border-radius:20px;
+.about-image {
+  flex: 1;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
+  background: #f5efe8;
+  min-height: 500px;
+  background-image: var(--yasir-photo-url);
+  background-size: cover; /* FIXED */
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .gallery-item img {
-  width:100%;
-  height:260px;
-  object-fit:cover;
-  filter:contrast(1.05) saturate(1.05);
-}
-
-.card {
-  background:white;
-  padding:20px;
-  border-radius:20px;
-  flex:1 1 250px;
-}
-
-.services { display:flex; flex-wrap:wrap; gap:20px; }
-
-.whatsapp {
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:white;
-  padding:15px;
-  border-radius:50px;
-  text-decoration:none;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s;
+  filter: contrast(1.05) saturate(1.05); /* FIXED */
 }
 </style>
 
-</head>
+<!-- ✅ UPDATED SERVICES (ONLY ADDED ONE CARD) -->
 
-<body>
+<div class="services-cards">
 
-<div class="container">
+  <!-- KEEP ALL YOUR EXISTING CARDS -->
 
-<h1>Italian Haven Consultation</h1>
-
-<section class="hero">
-<img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1920">
-</section>
-
-<h2>Services</h2>
-
-<div class="services">
-
-<div class="card">
-<h3>Bureaucracy & Visas</h3>
-<p>Permits, codice fiscale, residence help.</p>
-</div>
-
-<div class="card">
-<h3>Property Help</h3>
-<p>Find and secure housing safely.</p>
-</div>
-
-<div class="card">
-<h3>Translation Services</h3>
-<p>Italian ↔ English translation for documents, contracts and communication.</p>
-</div>
+  <div class="card">
+    <i class="fas fa-language"></i>
+    <h3>
+      <span data-en="Translation Services" data-it="Servizi di Traduzione" data-fr="Services de Traduction">
+        Translation Services
+      </span>
+    </h3>
+    <p>
+      <span data-en="Professional Italian ↔ English translation for documents, contracts, emails, and official communication." 
+            data-it="Traduzione professionale Italiano ↔ Inglese per documenti, contratti, email e comunicazioni ufficiali." 
+            data-fr="Traduction professionnelle Italien ↔ Anglais pour documents, contrats et communications officielles.">
+        Professional Italian ↔ English translation for documents, contracts, emails, and official communication.
+      </span>
+    </p>
+  </div>
 
 </div>
 
-<h2>Gallery</h2>
+<!-- ✅ REPLACED ONLY IMAGE LINKS (same structure) -->
 
-<div class="gallery">
-
-<div class="gallery-item">
 <img src="https://images.pexels.com/photos/208701/pexels-photo-208701.jpeg?auto=compress&cs=tinysrgb&w=1600">
-</div>
-
-<div class="gallery-item">
 <img src="https://images.pexels.com/photos/1796730/pexels-photo-1796730.jpeg?auto=compress&cs=tinysrgb&w=1600">
-</div>
-
-<div class="gallery-item">
 <img src="https://images.pexels.com/photos/532826/pexels-photo-532826.jpeg?auto=compress&cs=tinysrgb&w=1600">
-</div>
-
-<div class="gallery-item">
 <img src="https://images.pexels.com/photos/373639/pexels-photo-373639.jpeg?auto=compress&cs=tinysrgb&w=1600">
-</div>
+<img src="https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&w=1600">
+<img src="https://images.pexels.com/photos/167200/pexels-photo-167200.jpeg?auto=compress&cs=tinysrgb&w=1600">
 
-</div>
+<!-- ✅ UPDATED WHATSAPP BUTTON -->
 
-<h2>Contact</h2>
-
-<form id="form">
-<input type="text" placeholder="Your name"><br><br>
-<input type="email" placeholder="Email"><br><br>
-<textarea placeholder="Your message"></textarea><br><br>
-<button class="btn">Send</button>
-</form>
-
-</div>
-
-<a href="#" class="whatsapp" id="waBtn">
-<i class="fab fa-whatsapp"></i>
+<a href="#" class="whatsapp-float" id="whatsappBtn">
+  <i class="fab fa-whatsapp"></i> 
+  <span data-en="Chat on WhatsApp" data-it="Chatta su WhatsApp" data-fr="Discuter sur WhatsApp">Chat on WhatsApp</span>
 </a>
 
+<!-- ✅ ADD THIS SCRIPT BEFORE </body> -->
+
 <script>
-document.getElementById("waBtn").onclick = function() {
-  const name = document.querySelector('input').value || "No name";
-  const email = document.querySelector('input[type=email]').value || "No email";
-  const msg = document.querySelector('textarea').value || "No message";
+document.getElementById("whatsappBtn").addEventListener("click", function () {
+  const name = document.querySelector('input[type="text"]')?.value || "Not provided";
+  const email = document.querySelector('input[type="email"]')?.value || "Not provided";
+  const message = document.querySelector('textarea')?.value || "No message";
 
-  const text = `Hello Yasir,%0AName:${name}%0AEmail:${email}%0AMessage:${msg}`;
-  window.open(`https://wa.me/393510578614?text=${text}`);
-};
+  const text = `Hello Yasir,%0A%0AI'm interested in Italian Haven Consultation.%0A%0AName: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+
+  window.open(`https://wa.me/393510578614?text=${text}`, "_blank");
+});
 </script>
-
-</body>
-</html>
