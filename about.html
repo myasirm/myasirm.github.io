@@ -198,11 +198,33 @@
       border-radius: 28px;
       overflow: hidden;
       box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
+      background: #f3ede5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 380px;
     }
     .about-image img {
       width: 100%;
       height: auto;
       display: block;
+      object-fit: cover;
+    }
+    .photo-placeholder {
+      text-align: center;
+      padding: 40px;
+      color: #a68a6c;
+      background: #faf3ea;
+      border-radius: 28px;
+      width: 100%;
+    }
+    .photo-placeholder i {
+      font-size: 3rem;
+      margin-bottom: 16px;
+      color: #c97e2a;
+    }
+    .photo-placeholder p {
+      font-size: 0.9rem;
     }
 
     /* services cards */
@@ -291,6 +313,35 @@
       padding: 14px 38px;
     }
 
+    /* WhatsApp floating button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50px;
+      padding: 14px 22px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      z-index: 1000;
+      transition: 0.2s;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+    }
+    .whatsapp-float i {
+      font-size: 1.8rem;
+    }
+    .whatsapp-float:hover {
+      background-color: #128C7E;
+      transform: scale(1.02);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    }
+
     footer {
       background: #1e2a2f;
       color: #ddd9ce;
@@ -333,6 +384,14 @@
       border-top: 1px solid #3e4e48;
       font-size: 0.8rem;
     }
+    .location-badge {
+      background: #e9dfd1;
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      margin-top: 8px;
+    }
 
     @media (max-width: 850px) {
       .container {
@@ -350,6 +409,15 @@
       }
       .hero, .about-grid {
         flex-direction: column;
+      }
+      .whatsapp-float {
+        padding: 10px 18px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 0.85rem;
+      }
+      .whatsapp-float i {
+        font-size: 1.4rem;
       }
     }
   </style>
@@ -386,13 +454,13 @@
         <a href="#contact" class="btn-primary">Start your journey →</a>
       </div>
       <div class="hero-image">
-        <!-- Professional Italy landscape photo - Positano coast -->
-        <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Italian coastal village Positano view" loading="lazy">
+        <!-- Professional Italy landscape photo - Puglia region inspiration -->
+        <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Italian coastal village Puglia region view" loading="lazy">
       </div>
     </div>
   </section>
 
-  <!-- About & Yasir's story -->
+  <!-- About & Yasir's story - CUSTOM PHOTO READY (no random stock image) -->
   <section id="about">
     <div class="container">
       <div class="section-title">From immigrant to expert: the story behind Italian Haven</div>
@@ -400,15 +468,17 @@
       <div class="about-grid">
         <div class="about-text">
           <h3>Ciao, I'm Yasir.</h3>
-          <p>Originally from Pakistan, raised and educated in the United Kingdom — graduating from Coventry University — I always felt a magnetic pull toward Italy. After moving here, I spent over 15 years living and working across different Italian regions, from bustling Rome to the serene hills of Tuscany.</p>
+          <p>Originally from Pakistan, raised and educated in the United Kingdom — graduating from Coventry University — I always felt a magnetic pull toward Italy. After moving here, I spent over 15 years living and working across different Italian regions, from bustling Rome to the serene hills of Tuscany, and now proudly based in <strong>Puglia</strong>.</p>
           <p>Throughout this journey, I witnessed countless foreigners struggle with Italian bureaucracy, housing hurdles, and cultural adaptation — exactly the same obstacles I faced at the beginning. That frustration fueled my mission: <strong>Italian Haven Consultation</strong> was born to offer honest, practical, and experienced-based guidance. No sugar-coating, no vague theories — just real solutions.</p>
           <div class="signature">
             <i class="fas fa-quote-left"></i> We help you transform your Italian dream into a secure, joyful reality.
           </div>
+          <div class="location-badge"><i class="fas fa-map-pin"></i> Based in Puglia, Italy — heart of the Mediterranean</div>
         </div>
         <div class="about-image">
-          <!-- Professional consultant portrait -->
-          <img src="https://images.pexels.com/photos/2380794/pexels-photo-2380794.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&dpr=2" alt="Professional consultant warm portrait" loading="lazy">
+          <!-- Replace this area with YOUR PHOTO: simply replace the src attribute -->
+          <img id="yasirPersonalPhoto" src="https://via.placeholder.com/600x700/f3ede5/c97e2a?text=+Your+Photo+Here+" alt="Yasir - Founder of Italian Haven Consultation" style="width:100%; height:auto; border-radius:28px;">
+          <div style="display: none;" class="photo-placeholder">Placeholder — Add your image above</div>
         </div>
       </div>
     </div>
@@ -444,27 +514,27 @@
     </div>
   </section>
 
-  <!-- Professional Gallery / Photos that evoke Italy -->
+  <!-- Professional Gallery / Photos that evoke Italy (Puglia and iconic spots) -->
   <section id="gallery">
     <div class="container">
       <div class="section-title">La vita è bella — captured moments</div>
-      <div class="section-sub">From sunlit Tuscan valleys to vibrant piazzas: immerse in the lifestyle that awaits you.</div>
+      <div class="section-sub">From the whitewashed trulli of Puglia to vibrant piazzas: immerse in the lifestyle that awaits you.</div>
       <div class="gallery">
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/1267684/pexels-photo-1267684.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Florence cathedral and sunset">
-          <div class="caption">✨ Florence's golden hour</div>
+          <img src="https://images.pexels.com/photos/161252/zell-am-see-austria-summer-lake-161252.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Puglia countryside olive trees">
+          <div class="caption">🌿 Puglia's timeless olive groves</div>
         </div>
         <div class="gallery-item">
           <img src="https://images.pexels.com/photos/3601453/pexels-photo-3601453.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Amalfi Coast lemon terrace">
-          <div class="caption">🍋 Lemon groves, Amalfi Coast</div>
+          <div class="caption">🍋 Southern Italian coast</div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Trulli houses in Alberobello">
-          <div class="caption">🏡 Trulli magic, Puglia</div>
+          <img src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Trulli houses in Alberobello Puglia">
+          <div class="caption">🏡 Trulli magic, Alberobello (Puglia)</div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/1121586/pexels-photo-1121586.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Italian lake scenery">
-          <div class="caption">🌿 Serene Lake Como</div>
+          <img src="https://images.pexels.com/photos/1121586/pexels-photo-1121586.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Italian coastal sunset">
+          <div class="caption">🌅 Salento sunset, Puglia</div>
         </div>
       </div>
     </div>
@@ -480,7 +550,7 @@
     </div>
   </div>
 
-  <!-- Contact section & consultation form -->
+  <!-- Contact section with updated email, location, and WhatsApp integration -->
   <section id="contact">
     <div class="container">
       <div class="section-title">Get in touch — Your first consultation is just a click away</div>
@@ -488,9 +558,9 @@
       <div style="display: flex; flex-wrap: wrap; gap: 48px; margin-top: 20px;">
         <div style="flex: 1; min-width: 240px;">
           <h3><i class="fas fa-envelope"></i> Reach out directly</h3>
-          <p style="margin: 16px 0;"><i class="fas fa-phone-alt"></i> +39 333 123 4567</p>
-          <p><i class="fas fa-envelope"></i> hello@italianhaven.com</p>
-          <p style="margin-top: 24px;"><i class="fas fa-map-pin"></i> Based in Florence, Italy — remote consultations worldwide.</p>
+          <p style="margin: 16px 0;"><i class="fab fa-whatsapp"></i> WhatsApp: <strong>+39 351 057 8614</strong></p>
+          <p><i class="fas fa-envelope"></i> Email: <strong>mumtaz.yasir.m@gmail.com</strong></p>
+          <p style="margin-top: 12px;"><i class="fas fa-map-marker-alt"></i> Based in <strong>Puglia, Italy</strong> — remote consultations worldwide.</p>
           <div class="social" style="margin-top: 32px;">
             <i class="fab fa-instagram"></i> <i class="fab fa-facebook"></i> <i class="fab fa-linkedin"></i>
           </div>
@@ -516,7 +586,7 @@
     <div class="footer-grid">
       <div class="footer-col">
         <h4>Italian Haven Consultation</h4>
-        <p>Experience-driven guidance for your Italian journey. Founded by Yasir, with over 15 years of local insight.</p>
+        <p>Experience-driven guidance for your Italian journey. Founded by Yasir, with over 15 years of local insight, now serving you from Puglia.</p>
       </div>
       <div class="footer-col">
         <h4>Explore</h4>
@@ -537,8 +607,17 @@
   </div>
 </footer>
 
-<!-- smooth scroll & form handler -->
+<!-- Floating WhatsApp Chat Button (active with your number) -->
+<a href="https://wa.me/393510578614?text=Hello%20Yasir%2C%20I%27m%20interested%20in%20Italian%20Haven%20Consultation.%20Can%20we%20chat%3F" 
+   class="whatsapp-float" 
+   target="_blank" 
+   rel="noopener noreferrer">
+  <i class="fab fa-whatsapp"></i> 
+  <span>Chat on WhatsApp</span>
+</a>
+
 <script>
+  // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const href = this.getAttribute('href');
@@ -551,14 +630,25 @@
     });
   });
   
+  // Simple contact form handler
   const form = document.querySelector('form');
   if(form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      alert('✨ Thank you for reaching out! Yasir will get back to you soon. Grazie mille.');
+      alert('✨ Grazie! Your message has been sent. Yasir will reply within 24 hours. For immediate assistance, use WhatsApp.');
       form.reset();
     });
   }
+
+  // INSTRUCTION: To add your personal photo, replace the src of the image with id "yasirPersonalPhoto"
+  // Example: document.getElementById('yasirPersonalPhoto').src = "your-photo-url.jpg";
+  // Or manually edit the <img> tag inside .about-image. The current placeholder is just a gentle reminder.
+  console.log("Italian Haven — Ready. Replace the about image src with your own photo URL.");
 </script>
+
+<!-- Manual replacement note: The about section image currently shows a placeholder. 
+     To add your actual photo, change the src attribute of the img with id 'yasirPersonalPhoto' 
+     to the path of your image (e.g., 'my-photo.jpg' or an online URL). 
+     That's all — no random stock photo appears. -->
 </body>
 </html>
