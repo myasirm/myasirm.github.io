@@ -6,23 +6,32 @@
   <title>Italian Haven Consultation | Your Trusted Path to Living in Italy</title>
   
   <!-- =============================================== -->
-  <!-- === EASY PHOTO INSTRUCTIONS === -->
-  <!-- === JUST CHANGE THE LINE BELOW === -->
-  <!-- === Replace the URL inside quotes with YOUR photo link === -->
+  <!-- === YOUR PHOTO SETUP - READ THIS === -->
   <!-- =============================================== -->
+  <!-- 
+    To add YOUR photo:
+    
+    OPTION A (EASIEST): Upload your photo to Imgur, then:
+    1. Right-click on the image after uploading
+    2. Select "Copy image address" or "Copy image link"
+    3. Paste that link below (it should end in .jpg, .png, or .jpeg)
+    
+    OPTION B: Use any free image host like:
+    - postimages.org (gives direct link immediately)
+    - imgbb.com (gives direct link)
+    
+    PASTE THE DIRECT LINK HERE (replace the one below):
+  -->
   
   <style>
-    /* PHOTO CONFIGURATION - CHANGE THIS URL TO YOUR PHOTO */
+    /* CHANGE THIS URL TO YOUR ACTUAL PHOTO DIRECT LINK */
     :root {
-      --yasir-photo-url: url('https://imgur.com/a/LQqexYA');
-      /* 👆 REPLACE the link between the quotes with YOUR photo URL */
-      /* Example: --yasir-photo-url: url('https://i.imgur.com/your-photo.jpg'); */
+      --yasir-photo-url: url('https://via.placeholder.com/600x700/f3ede5/c97e2a?text=Click+to+add+your+photo');
+      /* 👆 REPLACE the URL between quotes with your direct image link */
     }
   </style>
   
-  <!-- Google Fonts & simple reset -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-  <!-- Font Awesome 6 (free icons) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     * {
@@ -45,7 +54,6 @@
       padding: 0 32px;
     }
 
-    /* header / nav */
     header {
       background: #ffffff;
       box-shadow: 0 8px 20px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.05);
@@ -94,7 +102,6 @@
       color: #c97e2a;
     }
 
-    /* buttons */
     .btn-primary {
       background: #c97e2a;
       border: none;
@@ -114,7 +121,6 @@
       transform: translateY(-2px);
     }
 
-    /* hero */
     .hero {
       display: flex;
       flex-wrap: wrap;
@@ -163,7 +169,6 @@
       transform: scale(1.02);
     }
 
-    /* section style */
     section {
       padding: 70px 0;
     }
@@ -182,7 +187,6 @@
       font-size: 1.1rem;
     }
 
-    /* story / about */
     .about-grid {
       display: flex;
       flex-wrap: wrap;
@@ -221,23 +225,7 @@
       background-position: center;
       background-repeat: no-repeat;
     }
-    /* fallback if no image */
-    .about-image::before {
-      content: "📸 Your photo appears here";
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      color: #a68a6c;
-      font-size: 0.9rem;
-      background: #faf3ea;
-      opacity: 0;
-    }
-    .about-image:has(style) {
-      /* empty fallback handled */
-    }
 
-    /* services cards */
     .services-cards {
       display: flex;
       flex-wrap: wrap;
@@ -273,7 +261,6 @@
       color: #4d5f4a;
     }
 
-    /* gallery / professional photos */
     .gallery {
       display: flex;
       flex-wrap: wrap;
@@ -306,7 +293,6 @@
       background: white;
     }
 
-    /* CTA */
     .cta {
       background: linear-gradient(135deg, #f9f1e7, #fff7ef);
       border-radius: 48px;
@@ -323,7 +309,6 @@
       padding: 14px 38px;
     }
 
-    /* WhatsApp floating button */
     .whatsapp-float {
       position: fixed;
       bottom: 30px;
@@ -349,7 +334,6 @@
     .whatsapp-float:hover {
       background-color: #128C7E;
       transform: scale(1.02);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     }
 
     footer {
@@ -457,7 +441,6 @@
 </header>
 
 <main>
-  <!-- Hero Section -->
   <section id="home">
     <div class="container hero">
       <div class="hero-content">
@@ -472,7 +455,6 @@
     </div>
   </section>
 
-  <!-- About & Yasir's story - YOUR PHOTO APPEARS HERE AUTOMATICALLY -->
   <section id="about">
     <div class="container">
       <div class="section-title">From immigrant to expert: the story behind Italian Haven</div>
@@ -487,14 +469,11 @@
           </div>
           <div class="location-badge"><i class="fas fa-map-pin"></i> Based in Puglia, Italy — heart of the Mediterranean</div>
         </div>
-        <div class="about-image" id="yasirPhotoBox">
-          <!-- Your photo appears here via CSS background-image (using the :root variable) -->
-        </div>
+        <div class="about-image" id="yasirPhotoBox"></div>
       </div>
     </div>
   </section>
 
-  <!-- Services -->
   <section id="services" style="background: #faf7f2;">
     <div class="container">
       <div class="section-title">What we offer — Bespoke support for your Italian move</div>
@@ -524,33 +503,40 @@
     </div>
   </section>
 
-  <!-- Gallery -->
+  <!-- NEW GALLERY WITH REAL PUGLIA TOWNS -->
   <section id="gallery">
     <div class="container">
-      <div class="section-title">La vita è bella — captured moments</div>
-      <div class="section-sub">From the whitewashed trulli of Puglia to vibrant piazzas.</div>
+      <div class="section-title">Discover Puglia — where I call home</div>
+      <div class="section-sub">Explore the whitewashed streets, trulli, and Baroque beauty of Southern Italy</div>
       <div class="gallery">
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/161252/zell-am-see-austria-summer-lake-161252.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Puglia countryside">
-          <div class="caption">🌿 Puglia's timeless olive groves</div>
+          <img src="https://images.pexels.com/photos/14670196/pexels-photo-14670196.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Ostuni white city">
+          <div class="caption">🤍 Ostuni — The White City</div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/3601453/pexels-photo-3601453.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Amalfi Coast">
-          <div class="caption">🍋 Southern Italian coast</div>
+          <img src="https://images.pexels.com/photos/14578437/pexels-photo-14578437.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Alberobello Trulli">
+          <div class="caption">🏡 Alberobello — Trulli magic</div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Trulli houses">
-          <div class="caption">🏡 Trulli magic, Alberobello (Puglia)</div>
+          <img src="https://images.pexels.com/photos/15063988/pexels-photo-15063988.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Fasano countryside">
+          <div class="caption">🌳 Fasano — Nature & charm</div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/1121586/pexels-photo-1121586.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Salento sunset">
-          <div class="caption">🌅 Salento sunset, Puglia</div>
+          <img src="https://images.pexels.com/photos/15664501/pexels-photo-15664501.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Cisternino alley">
+          <div class="caption">🏘️ Cisternino — Authentic Itria Valley</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.pexels.com/photos/13958535/pexels-photo-13958535.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Lecce Baroque">
+          <div class="caption">🏛️ Lecce — Florence of the South</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Puglia traditional trullo">
+          <div class="caption">✨ Traditional Trullo, Alberobello</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
   <div class="container">
     <div class="cta">
       <h2>Over 15 years living & working in Italy — firsthand expertise</h2>
@@ -560,7 +546,6 @@
     </div>
   </div>
 
-  <!-- Contact -->
   <section id="contact">
     <div class="container">
       <div class="section-title">Get in touch — Your first consultation is just a click away</div>
@@ -617,7 +602,6 @@
   </div>
 </footer>
 
-<!-- Floating WhatsApp Button -->
 <a href="https://wa.me/393510578614?text=Hello%20Yasir%2C%20I%27m%20interested%20in%20Italian%20Haven%20Consultation.%20Can%20we%20chat%3F" 
    class="whatsapp-float" 
    target="_blank" 
@@ -627,7 +611,6 @@
 </a>
 
 <script>
-  // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const href = this.getAttribute('href');
@@ -640,7 +623,6 @@
     });
   });
   
-  // Form handler
   const form = document.querySelector('form');
   if(form) {
     form.addEventListener('submit', (e) => {
@@ -652,24 +634,26 @@
 </script>
 
 <!-- ========================================= -->
-<!-- === HOW TO ADD YOUR PHOTO (EASY WAY) === -->
+<!-- HOW TO ADD YOUR PHOTO - CORRECT WAY -->
 <!-- ========================================= -->
 <!-- 
-  OPTION 1: Change the URL at the VERY TOP of this file (line ~16)
-  Look for: --yasir-photo-url: url('https://via.placeholder.com/...');
-  Replace the link inside url('...') with YOUR photo URL.
+  Your link (https://imgur.com/a/LQqexYA) is an ALBUM page, not a direct image.
   
-  OPTION 2: If you have the photo file on your computer:
-  1. Save your photo as "yasir.jpg" in the same folder as this HTML file
-  2. Change line ~16 to: --yasir-photo-url: url('yasir.jpg');
+  To get your photo to show:
   
-  OPTION 3: Upload to a free image host:
-  - Go to imgur.com or postimages.org
-  - Upload your photo
-  - Copy the direct image link (ends with .jpg or .png)
-  - Paste it between the quotes after url('')
+  1. Go to https://imgur.com/a/LQqexYA
+  2. Click on your photo to open it full size
+  3. RIGHT-CLICK on the photo
+  4. Select "Copy image address" or "Copy image link"
+  5. The link should end with .jpg, .png, or .jpeg
+  6. Replace the URL in the :root section (line ~23) with that link
   
-  That's it! Your photo will automatically appear in the About section.
+  Example of a working direct link:
+  --yasir-photo-url: url('https://i.imgur.com/YourPhotoCode.jpg');
+  
+  If Imgur doesn't work, try:
+  - Upload to postimages.org (gives direct link immediately)
+  - Upload to imgbb.com (choose "direct link" option)
 -->
 </body>
 </html>
