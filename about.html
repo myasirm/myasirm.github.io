@@ -310,11 +310,19 @@
     .footer-col p, .footer-col i {
       margin: 8px 0;
     }
+    .footer-col a {
+      color: #ddd9ce;
+      text-decoration: none;
+    }
+    .footer-col a:hover {
+      color: #eacc9c;
+    }
     .social i {
       font-size: 1.4rem;
       margin-right: 16px;
       color: #eacc9c;
       transition: 0.2s;
+      cursor: pointer;
     }
     .social i:hover {
       color: white;
@@ -378,8 +386,8 @@
         <a href="#contact" class="btn-primary">Start your journey →</a>
       </div>
       <div class="hero-image">
-        <!-- professional Italy landscape photo (coastal village) -->
-        <img src="https://images.pexels.com/photos/2372720/pexels-photo-2372720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Italian coastal village Positano view" loading="lazy">
+        <!-- Professional Italy landscape photo - Positano coast -->
+        <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Italian coastal village Positano view" loading="lazy">
       </div>
     </div>
   </section>
@@ -399,8 +407,8 @@
           </div>
         </div>
         <div class="about-image">
-          <!-- Yasir portrait / authentic consultant photo (professional style) -->
-          <img src="https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&dpr=2" alt="Professional consultant Yasir warm portrait" loading="lazy">
+          <!-- Professional consultant portrait -->
+          <img src="https://images.pexels.com/photos/2380794/pexels-photo-2380794.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&dpr=2" alt="Professional consultant warm portrait" loading="lazy">
         </div>
       </div>
     </div>
@@ -410,7 +418,7 @@
   <section id="services" style="background: #faf7f2;">
     <div class="container">
       <div class="section-title">What we offer — Bespoke support for your Italian move</div>
-      <div class="section-sub">Tailored, step-by-step consultation from someone who’s been exactly where you are.</div>
+      <div class="section-sub">Tailored, step-by-step consultation from someone who's been exactly where you are.</div>
       <div class="services-cards">
         <div class="card">
           <i class="fas fa-file-alt"></i>
@@ -443,19 +451,19 @@
       <div class="section-sub">From sunlit Tuscan valleys to vibrant piazzas: immerse in the lifestyle that awaits you.</div>
       <div class="gallery">
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Florence cathedral and sunset">
+          <img src="https://images.pexels.com/photos/1267684/pexels-photo-1267684.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Florence cathedral and sunset">
           <div class="caption">✨ Florence's golden hour</div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/1092364/pexels-photo-1092364.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Amalfi Coast lemon terrace">
+          <img src="https://images.pexels.com/photos/3601453/pexels-photo-3601453.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Amalfi Coast lemon terrace">
           <div class="caption">🍋 Lemon groves, Amalfi Coast</div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/4397858/pexels-photo-4397858.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Trulli houses in Alberobello">
+          <img src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Trulli houses in Alberobello">
           <div class="caption">🏡 Trulli magic, Puglia</div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/161252/zell-am-see-austria-summer-lake-161252.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Italian lake scenery">
+          <img src="https://images.pexels.com/photos/1121586/pexels-photo-1121586.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Italian lake scenery">
           <div class="caption">🌿 Serene Lake Como</div>
         </div>
       </div>
@@ -512,9 +520,9 @@
       </div>
       <div class="footer-col">
         <h4>Explore</h4>
-        <p><a href="#about" style="color:#eacc9c; text-decoration: none;">Our story</a></p>
-        <p><a href="#services" style="color:#eacc9c; text-decoration: none;">Services</a></p>
-        <p><a href="#gallery" style="color:#eacc9c; text-decoration: none;">Italian moments</a></p>
+        <p><a href="#about">Our story</a></p>
+        <p><a href="#services">Services</a></p>
+        <p><a href="#gallery">Italian moments</a></p>
       </div>
       <div class="footer-col">
         <h4>Legal</h4>
@@ -529,7 +537,7 @@
   </div>
 </footer>
 
-<!-- optional smooth scroll behavior -->
+<!-- smooth scroll & form handler -->
 <script>
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -542,7 +550,7 @@
       }
     });
   });
-  // Simple contact form prevent default (no backend, just demo)
+  
   const form = document.querySelector('form');
   if(form) {
     form.addEventListener('submit', (e) => {
