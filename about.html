@@ -4,6 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <title>Italian Haven Consultation | Your Trusted Path to Living in Italy</title>
+  
+  <!-- =============================================== -->
+  <!-- === EASY PHOTO INSTRUCTIONS === -->
+  <!-- === JUST CHANGE THE LINE BELOW === -->
+  <!-- === Replace the URL inside quotes with YOUR photo link === -->
+  <!-- =============================================== -->
+  
+  <style>
+    /* PHOTO CONFIGURATION - CHANGE THIS URL TO YOUR PHOTO */
+    :root {
+      --yasir-photo-url: url('https://imgur.com/a/LQqexYA');
+      /* 👆 REPLACE the link between the quotes with YOUR photo URL */
+      /* Example: --yasir-photo-url: url('https://i.imgur.com/your-photo.jpg'); */
+    }
+  </style>
+  
   <!-- Google Fonts & simple reset -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
   <!-- Font Awesome 6 (free icons) -->
@@ -199,32 +215,26 @@
       overflow: hidden;
       box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
       background: #f3ede5;
+      min-height: 450px;
+      background-image: var(--yasir-photo-url);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    /* fallback if no image */
+    .about-image::before {
+      content: "📸 Your photo appears here";
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 380px;
-    }
-    .about-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover;
-    }
-    .photo-placeholder {
-      text-align: center;
-      padding: 40px;
+      height: 100%;
       color: #a68a6c;
-      background: #faf3ea;
-      border-radius: 28px;
-      width: 100%;
-    }
-    .photo-placeholder i {
-      font-size: 3rem;
-      margin-bottom: 16px;
-      color: #c97e2a;
-    }
-    .photo-placeholder p {
       font-size: 0.9rem;
+      background: #faf3ea;
+      opacity: 0;
+    }
+    .about-image:has(style) {
+      /* empty fallback handled */
     }
 
     /* services cards */
@@ -419,6 +429,9 @@
       .whatsapp-float i {
         font-size: 1.4rem;
       }
+      .about-image {
+        min-height: 350px;
+      }
     }
   </style>
 </head>
@@ -454,13 +467,12 @@
         <a href="#contact" class="btn-primary">Start your journey →</a>
       </div>
       <div class="hero-image">
-        <!-- Professional Italy landscape photo - Puglia region inspiration -->
-        <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Italian coastal village Puglia region view" loading="lazy">
+        <img src="https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Italian coastal Puglia view" loading="lazy">
       </div>
     </div>
   </section>
 
-  <!-- About & Yasir's story - CUSTOM PHOTO READY (no random stock image) -->
+  <!-- About & Yasir's story - YOUR PHOTO APPEARS HERE AUTOMATICALLY -->
   <section id="about">
     <div class="container">
       <div class="section-title">From immigrant to expert: the story behind Italian Haven</div>
@@ -475,16 +487,14 @@
           </div>
           <div class="location-badge"><i class="fas fa-map-pin"></i> Based in Puglia, Italy — heart of the Mediterranean</div>
         </div>
-        <div class="about-image">
-          <!-- Replace this area with YOUR PHOTO: simply replace the src attribute -->
-          <img id="yasirPersonalPhoto" src="https://via.placeholder.com/600x700/f3ede5/c97e2a?text=+Your+Photo+Here+" alt="Yasir - Founder of Italian Haven Consultation" style="width:100%; height:auto; border-radius:28px;">
-          <div style="display: none;" class="photo-placeholder">Placeholder — Add your image above</div>
+        <div class="about-image" id="yasirPhotoBox">
+          <!-- Your photo appears here via CSS background-image (using the :root variable) -->
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services / what we offer -->
+  <!-- Services -->
   <section id="services" style="background: #faf7f2;">
     <div class="container">
       <div class="section-title">What we offer — Bespoke support for your Italian move</div>
@@ -514,43 +524,43 @@
     </div>
   </section>
 
-  <!-- Professional Gallery / Photos that evoke Italy (Puglia and iconic spots) -->
+  <!-- Gallery -->
   <section id="gallery">
     <div class="container">
       <div class="section-title">La vita è bella — captured moments</div>
-      <div class="section-sub">From the whitewashed trulli of Puglia to vibrant piazzas: immerse in the lifestyle that awaits you.</div>
+      <div class="section-sub">From the whitewashed trulli of Puglia to vibrant piazzas.</div>
       <div class="gallery">
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/161252/zell-am-see-austria-summer-lake-161252.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Puglia countryside olive trees">
+          <img src="https://images.pexels.com/photos/161252/zell-am-see-austria-summer-lake-161252.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Puglia countryside">
           <div class="caption">🌿 Puglia's timeless olive groves</div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/3601453/pexels-photo-3601453.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Amalfi Coast lemon terrace">
+          <img src="https://images.pexels.com/photos/3601453/pexels-photo-3601453.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Amalfi Coast">
           <div class="caption">🍋 Southern Italian coast</div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Trulli houses in Alberobello Puglia">
+          <img src="https://images.pexels.com/photos/617278/pexels-photo-617278.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Trulli houses">
           <div class="caption">🏡 Trulli magic, Alberobello (Puglia)</div>
         </div>
         <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/1121586/pexels-photo-1121586.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Italian coastal sunset">
+          <img src="https://images.pexels.com/photos/1121586/pexels-photo-1121586.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Salento sunset">
           <div class="caption">🌅 Salento sunset, Puglia</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Why Italian Haven: personal insight block -->
+  <!-- CTA -->
   <div class="container">
     <div class="cta">
       <h2>Over 15 years living & working in Italy — firsthand expertise</h2>
-      <p style="max-width: 650px; margin: 0 auto 28px auto;">I know the real challenges because I lived them. From opening a bank account to securing a lease in Rome, I'll be your cultural compass. No fluff, just honest mentorship.</p>
+      <p style="max-width: 650px; margin: 0 auto 28px auto;">I know the real challenges because I lived them. From opening a bank account to securing a lease in Rome, I'll be your cultural compass.</p>
       <i class="fas fa-handshake" style="font-size: 2rem; color: #c97e2a; margin-bottom: 16px; display: inline-block;"></i>
       <div><a href="#contact" class="btn-primary">Let's talk about your Italian dream</a></div>
     </div>
   </div>
 
-  <!-- Contact section with updated email, location, and WhatsApp integration -->
+  <!-- Contact -->
   <section id="contact">
     <div class="container">
       <div class="section-title">Get in touch — Your first consultation is just a click away</div>
@@ -607,7 +617,7 @@
   </div>
 </footer>
 
-<!-- Floating WhatsApp Chat Button (active with your number) -->
+<!-- Floating WhatsApp Button -->
 <a href="https://wa.me/393510578614?text=Hello%20Yasir%2C%20I%27m%20interested%20in%20Italian%20Haven%20Consultation.%20Can%20we%20chat%3F" 
    class="whatsapp-float" 
    target="_blank" 
@@ -617,7 +627,7 @@
 </a>
 
 <script>
-  // Smooth scroll for anchor links
+  // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const href = this.getAttribute('href');
@@ -630,25 +640,36 @@
     });
   });
   
-  // Simple contact form handler
+  // Form handler
   const form = document.querySelector('form');
   if(form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      alert('✨ Grazie! Your message has been sent. Yasir will reply within 24 hours. For immediate assistance, use WhatsApp.');
+      alert('✨ Grazie! Your message has been sent. Yasir will reply within 24 hours.');
       form.reset();
     });
   }
-
-  // INSTRUCTION: To add your personal photo, replace the src of the image with id "yasirPersonalPhoto"
-  // Example: document.getElementById('yasirPersonalPhoto').src = "your-photo-url.jpg";
-  // Or manually edit the <img> tag inside .about-image. The current placeholder is just a gentle reminder.
-  console.log("Italian Haven — Ready. Replace the about image src with your own photo URL.");
 </script>
 
-<!-- Manual replacement note: The about section image currently shows a placeholder. 
-     To add your actual photo, change the src attribute of the img with id 'yasirPersonalPhoto' 
-     to the path of your image (e.g., 'my-photo.jpg' or an online URL). 
-     That's all — no random stock photo appears. -->
+<!-- ========================================= -->
+<!-- === HOW TO ADD YOUR PHOTO (EASY WAY) === -->
+<!-- ========================================= -->
+<!-- 
+  OPTION 1: Change the URL at the VERY TOP of this file (line ~16)
+  Look for: --yasir-photo-url: url('https://via.placeholder.com/...');
+  Replace the link inside url('...') with YOUR photo URL.
+  
+  OPTION 2: If you have the photo file on your computer:
+  1. Save your photo as "yasir.jpg" in the same folder as this HTML file
+  2. Change line ~16 to: --yasir-photo-url: url('yasir.jpg');
+  
+  OPTION 3: Upload to a free image host:
+  - Go to imgur.com or postimages.org
+  - Upload your photo
+  - Copy the direct image link (ends with .jpg or .png)
+  - Paste it between the quotes after url('')
+  
+  That's it! Your photo will automatically appear in the About section.
+-->
 </body>
 </html>
