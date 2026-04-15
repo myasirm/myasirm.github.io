@@ -9,28 +9,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
   <style>
-    /* YOUR PHOTO - REPLACE THE URL BELOW WITH YOUR DIRECT IMAGE LINK */
-    :root {[url=https://postimg.cc/m1TJ6LVv][img]https://i.postimg.cc/m1TJ6LVv/alberobello.jpg[/img][/url]
-
-[url=https://postimg.cc/MM7gDM05][img]https://i.postimg.cc/MM7gDM05/cisternino.jpg[/img][/url]
-
-[url=https://postimg.cc/bDx4TD01][img]https://i.postimg.cc/bDx4TD01/cisternino-2.jpg[/img][/url]
-
-[url=https://postimg.cc/WFGxnFmX][img]https://i.postimg.cc/WFGxnFmX/fasano.jpg[/img][/url]
-
-[url=https://postimg.cc/G8F6Q8PM][img]https://i.postimg.cc/G8F6Q8PM/fasano-(2).jpg[/img][/url]
-
-[url=https://postimg.cc/ctd25xT5][img]https://i.postimg.cc/ctd25xT5/lecce.jpg[/img][/url]
-
-[url=https://postimg.cc/Lgmw09vT][img]https://i.postimg.cc/Lgmw09vT/lecce-(1).jpg[/img][/url]
-
-[url=https://postimg.cc/MfzNr6ts][img]https://i.postimg.cc/MfzNr6ts/ostuni.jpg[/img][/url]
-
-[url=https://postimg.cc/CnwX6hJr][img]https://i.postimg.cc/CnwX6hJr/ostuni2.jpg[/img][/url]
-
-
+    /* YOUR PHOTO - REPLACE THIS URL WITH YOUR DIRECT IMGUR LINK */
+    :root {
       --yasir-photo-url: url('https://i.imgur.com/e8JL2EY.jpeg');
-      /* 👆 When you get your direct link from Imgur (ends in .jpg), replace the URL above */
     }
     
     * {
@@ -284,6 +265,40 @@
       color: #4d5f4a;
     }
 
+    /* Gallery Styles */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .gallery-item {
+      flex: 1 1 280px;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 12px 22px -8px rgba(0,0,0,0.12);
+      transition: 0.2s;
+      background: #fff4ea;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.4s;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    .caption {
+      padding: 16px;
+      text-align: center;
+      font-weight: 500;
+      background: white;
+    }
+
     .cta {
       background: linear-gradient(135deg, #f9f1e7, #fff7ef);
       border-radius: 48px;
@@ -431,6 +446,7 @@
         <li><a href="#home" data-en="Home" data-it="Home" data-fr="Accueil">Home</a></li>
         <li><a href="#about" data-en="Our Story" data-it="La Nostra Storia" data-fr="Notre Histoire">Our Story</a></li>
         <li><a href="#services" data-en="Services" data-it="Servizi" data-fr="Services">Services</a></li>
+        <li><a href="#gallery" data-en="Gallery" data-it="Galleria" data-fr="Galerie">Gallery</a></li>
         <li><a href="#contact" data-en="Connect" data-it="Contatti" data-fr="Contact">Connect</a></li>
       </ul>
       <a href="#contact" class="btn-primary book-btn" data-en="Book a chat" data-it="Prenota una chat" data-fr="Réserver un chat">Book a chat <i class="fas fa-arrow-right"></i></a>
@@ -504,6 +520,52 @@
     </div>
   </section>
 
+  <!-- Gallery Section - YOUR PUGLIA PHOTOS -->
+  <section id="gallery">
+    <div class="container">
+      <div class="section-title"><span data-en="Discover Puglia — where I call home" data-it="Scopri la Puglia — dove chiamo casa" data-fr="Découvrez les Pouilles — là où j'appelle maison">Discover Puglia — where I call home</span></div>
+      <div class="section-sub"><span data-en="Explore the whitewashed streets, trulli, and Baroque beauty of Southern Italy" data-it="Esplora le strade imbiancate, i trulli e la bellezza barocca del Sud Italia" data-fr="Explorez les rues blanchies à la chaux, les trulli et la beauté baroque du sud de l'Italie">Explore the whitewashed streets, trulli, and Baroque beauty of Southern Italy</span></div>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="https://i.postimg.cc/m1TJ6LVv/alberobello.jpg" alt="Alberobello Trulli" loading="lazy">
+          <div class="caption">🏡 Alberobello — Trulli houses</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.postimg.cc/MM7gDM05/cisternino.jpg" alt="Cisternino old town" loading="lazy">
+          <div class="caption">🏘️ Cisternino — Whitewashed charm</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.postimg.cc/bDx4TD01/cisternino-2.jpg" alt="Cisternino alley" loading="lazy">
+          <div class="caption">✨ Cisternino — Authentic Itria Valley</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.postimg.cc/WFGxnFmX/fasano.jpg" alt="Fasano historic center" loading="lazy">
+          <div class="caption">🌳 Fasano — Historic charm</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.postimg.cc/G8F6Q8PM/fasano-(2).jpg" alt="Fasano countryside" loading="lazy" onerror="this.src='https://placehold.co/800x600/f3ede5/c97e2a?text=Fasano+Photo'">
+          <div class="caption">🌿 Fasano — Nature & tranquility</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.postimg.cc/ctd25xT5/lecce.jpg" alt="Lecce Baroque architecture" loading="lazy">
+          <div class="caption">🏛️ Lecce — Florence of the South</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.postimg.cc/Lgmw09vT/lecce-(1).jpg" alt="Lecce cathedral" loading="lazy">
+          <div class="caption">⛪ Lecce — Baroque masterpiece</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.postimg.cc/MfzNr6ts/ostuni.jpg" alt="Ostuni white city" loading="lazy">
+          <div class="caption">🤍 Ostuni — The White City</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://i.postimg.cc/CnwX6hJr/ostuni2.jpg" alt="Ostuni panoramic view" loading="lazy">
+          <div class="caption">🌅 Ostuni — Panoramic views</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA Section -->
   <div class="container">
     <div class="cta">
@@ -556,6 +618,7 @@
         <h4><span data-en="Explore" data-it="Esplora" data-fr="Explorer">Explore</span></h4>
         <p><a href="#about" data-en="Our story" data-it="La nostra storia" data-fr="Notre histoire">Our story</a></p>
         <p><a href="#services" data-en="Services" data-it="Servizi" data-fr="Services">Services</a></p>
+        <p><a href="#gallery" data-en="Gallery" data-it="Galleria" data-fr="Galerie">Gallery</a></p>
       </div>
       <div class="footer-col">
         <h4><span data-en="Legal" data-it="Legale" data-fr="Juridique">Legal</span></h4>
@@ -586,7 +649,6 @@
   function switchLanguage(lang) {
     currentLang = lang;
     
-    // Update active button style
     document.querySelectorAll('.lang-btn').forEach(btn => {
       if (btn.getAttribute('data-lang') === lang) {
         btn.classList.add('active');
@@ -595,7 +657,6 @@
       }
     });
     
-    // Update all elements with data-* attributes
     document.querySelectorAll('[data-en]').forEach(el => {
       if (el.getAttribute(`data-${lang}`)) {
         if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
@@ -606,7 +667,6 @@
       }
     });
     
-    // Update placeholder for form inputs (special case)
     const nameInput = document.querySelector('input[placeholder="Your name"]');
     const emailInput = document.querySelector('input[placeholder="Email address"]');
     const textarea = document.querySelector('textarea');
@@ -624,14 +684,12 @@
     }
   }
   
-  // Add event listeners to language buttons
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       switchLanguage(btn.getAttribute('data-lang'));
     });
   });
   
-  // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const href = this.getAttribute('href');
@@ -644,7 +702,6 @@
     });
   });
   
-  // Contact form handler
   const form = document.querySelector('form');
   if(form) {
     form.addEventListener('submit', (e) => {
