@@ -5,35 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <title>Italian Haven Consultation | Your Trusted Path to Living in Italy</title>
   
-  <!-- =============================================== -->
-  <!-- === YOUR PHOTO SETUP - READ THIS === -->
-  <!-- =============================================== -->
-  <!-- 
-    To add YOUR photo:
-    
-    OPTION A (EASIEST): Upload your photo to Imgur, then:
-    1. Right-click on the image after uploading
-    2. Select "Copy image address" or "Copy image link"
-    3. Paste that link below (it should end in .jpg, .png, or .jpeg)
-    
-    OPTION B: Use any free image host like:
-    - postimages.org (gives direct link immediately)
-    - imgbb.com (gives direct link)
-    
-    PASTE THE DIRECT LINK HERE (replace the one below):
-  -->
-  
-  <style>
-    /* CHANGE THIS URL TO YOUR ACTUAL PHOTO DIRECT LINK */
-    :root {
-      --yasir-photo-url: url('https://via.placeholder.com/600x700/f3ede5/c97e2a?text=Click+to+add+your+photo');
-      /* 👆 REPLACE the URL between quotes with your direct image link */
-    }
-  </style>
-  
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
   <style>
+    /* YOUR PHOTO IS NOW ADDED! */
+    :root {
+      --yasir-photo-url: url('https://i.imgur.com/e8JL2EY.jpeg');
+    }
+    
     * {
       margin: 0;
       padding: 0;
@@ -441,6 +423,7 @@
 </header>
 
 <main>
+  <!-- Hero Section -->
   <section id="home">
     <div class="container hero">
       <div class="hero-content">
@@ -455,6 +438,7 @@
     </div>
   </section>
 
+  <!-- About Section - YOUR PHOTO NOW SHOWS HERE! -->
   <section id="about">
     <div class="container">
       <div class="section-title">From immigrant to expert: the story behind Italian Haven</div>
@@ -469,11 +453,12 @@
           </div>
           <div class="location-badge"><i class="fas fa-map-pin"></i> Based in Puglia, Italy — heart of the Mediterranean</div>
         </div>
-        <div class="about-image" id="yasirPhotoBox"></div>
+        <div class="about-image"></div>
       </div>
     </div>
   </section>
 
+  <!-- Services Section -->
   <section id="services" style="background: #faf7f2;">
     <div class="container">
       <div class="section-title">What we offer — Bespoke support for your Italian move</div>
@@ -503,7 +488,7 @@
     </div>
   </section>
 
-  <!-- NEW GALLERY WITH REAL PUGLIA TOWNS -->
+  <!-- Gallery Section - Puglia Towns (Ostuni, Alberobello, Fasano, Cisternino, Lecce) -->
   <section id="gallery">
     <div class="container">
       <div class="section-title">Discover Puglia — where I call home</div>
@@ -537,6 +522,7 @@
     </div>
   </section>
 
+  <!-- CTA Section -->
   <div class="container">
     <div class="cta">
       <h2>Over 15 years living & working in Italy — firsthand expertise</h2>
@@ -546,6 +532,7 @@
     </div>
   </div>
 
+  <!-- Contact Section -->
   <section id="contact">
     <div class="container">
       <div class="section-title">Get in touch — Your first consultation is just a click away</div>
@@ -602,6 +589,7 @@
   </div>
 </footer>
 
+<!-- Floating WhatsApp Button -->
 <a href="https://wa.me/393510578614?text=Hello%20Yasir%2C%20I%27m%20interested%20in%20Italian%20Haven%20Consultation.%20Can%20we%20chat%3F" 
    class="whatsapp-float" 
    target="_blank" 
@@ -611,6 +599,7 @@
 </a>
 
 <script>
+  // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const href = this.getAttribute('href');
@@ -623,6 +612,7 @@
     });
   });
   
+  // Contact form handler
   const form = document.querySelector('form');
   if(form) {
     form.addEventListener('submit', (e) => {
@@ -633,27 +623,5 @@
   }
 </script>
 
-<!-- ========================================= -->
-<!-- HOW TO ADD YOUR PHOTO - CORRECT WAY -->
-<!-- ========================================= -->
-<!-- 
-  Your link (https://imgur.com/a/LQqexYA) is an ALBUM page, not a direct image.
-  
-  To get your photo to show:
-  
-  1. Go to https://imgur.com/a/LQqexYA
-  2. Click on your photo to open it full size
-  3. RIGHT-CLICK on the photo
-  4. Select "Copy image address" or "Copy image link"
-  5. The link should end with .jpg, .png, or .jpeg
-  6. Replace the URL in the :root section (line ~23) with that link
-  
-  Example of a working direct link:
-  --yasir-photo-url: url('https://i.imgur.com/YourPhotoCode.jpg');
-  
-  If Imgur doesn't work, try:
-  - Upload to postimages.org (gives direct link immediately)
-  - Upload to imgbb.com (choose "direct link" option)
--->
 </body>
 </html>
