@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Italian Haven Consultation | Your Trusted Path to Living in Italy</title>
+  <title>Italian Haven | Move to Italy without the nightmare – Yasir’s real guidance</title>
   
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
   <style>
-    /* YOUR PHOTO - REPLACE THIS URL WITH YOUR DIRECT IMGUR LINK */
-    /* To get your direct Imgur link: right-click your image on Imgur → "Copy image address" */
+    /* Photo placeholder - Replace URL with your actual photo */
     :root {
       --yasir-photo-url: url('https://i.imgur.com/e8JL2EY.jpeg');
     }
@@ -263,10 +262,18 @@
     }
     .card h3 {
       font-size: 1.4rem;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
     .card p {
       color: #4d5f4a;
+      font-size: 0.95rem;
+    }
+    .card .benefit {
+      font-size: 0.8rem;
+      color: #b3621a;
+      margin-top: 12px;
+      font-weight: 500;
+      display: block;
     }
 
     /* Gallery Styles */
@@ -318,6 +325,17 @@
     .cta .btn-primary {
       font-size: 1.1rem;
       padding: 14px 38px;
+    }
+    .guarantee-badge {
+      background: #ffffffcc;
+      backdrop-filter: blur(4px);
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 60px;
+      font-size: 0.8rem;
+      margin-top: 20px;
+      font-weight: 600;
+      color: #2c5a2a;
     }
 
     .whatsapp-float {
@@ -397,6 +415,31 @@
       font-size: 0.8rem;
       margin-top: 8px;
     }
+    .faq-item {
+      background: white;
+      border-radius: 20px;
+      padding: 18px 24px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      border: 1px solid #f0e4d4;
+    }
+    .faq-question {
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-answer {
+      margin-top: 12px;
+      color: #4d5f4a;
+      font-size: 0.9rem;
+      display: none;
+    }
+    .faq-answer.show {
+      display: block;
+    }
 
     @media (max-width: 850px) {
       .container {
@@ -436,7 +479,6 @@
 </head>
 <body>
 
-<!-- Language Toggle Bar -->
 <div class="lang-bar">
   <button class="lang-btn active" data-lang="en">🇬🇧 English</button>
   <button class="lang-btn" data-lang="it">🇮🇹 Italiano</button>
@@ -455,21 +497,21 @@
         <li><a href="#about" data-en="Our Story" data-it="La Nostra Storia" data-fr="Notre Histoire">Our Story</a></li>
         <li><a href="#services" data-en="Services" data-it="Servizi" data-fr="Services">Services</a></li>
         <li><a href="#gallery" data-en="Gallery" data-it="Galleria" data-fr="Galerie">Gallery</a></li>
+        <li><a href="#faq" data-en="FAQ" data-it="FAQ" data-fr="FAQ">FAQ</a></li>
         <li><a href="#contact" data-en="Connect" data-it="Contatti" data-fr="Contact">Connect</a></li>
       </ul>
-      <a href="#contact" class="btn-primary book-btn" data-en="Book a chat" data-it="Prenota una chat" data-fr="Réserver un chat">Book a chat <i class="fas fa-arrow-right"></i></a>
+      <a href="#contact" class="btn-primary book-btn" data-en="Book a free discovery call" data-it="Prenota una chiamata gratuita" data-fr="Réserver un appel découverte gratuit">Book a free discovery call <i class="fas fa-arrow-right"></i></a>
     </nav>
   </div>
 </header>
 
 <main>
-  <!-- Hero Section -->
   <section id="home">
     <div class="container hero">
       <div class="hero-content">
         <div class="hero-badge"><i class="fas fa-map-marker-alt"></i> <span data-en="La Dolce Vita starts here" data-it="La Dolce Vita inizia qui" data-fr="La Dolce Vita commence ici">La Dolce Vita starts here</span></div>
         <h1><span data-en="Your trusted gateway to living the Italian dream" data-it="La tua porta d'accesso affidabile per vivere il sogno italiano" data-fr="Votre porte d'entrée de confiance pour vivre le rêve italien">Your trusted gateway to living the Italian dream</span></h1>
-        <p><span data-en="Navigate bureaucracy, find your perfect home, and embrace Italian culture with guidance rooted in real experience — not theory." data-it="Naviga la burocrazia, trova la casa perfetta e abbraccia la cultura italiana con una guida basata sull'esperienza reale — non sulla teoria." data-fr="Naviguez dans la bureaucratie, trouvez votre maison idéale et embrassez la culture italienne avec des conseils basés sur une expérience réelle — pas sur la théorie.">Navigate bureaucracy, find your perfect home, and embrace Italian culture with guidance rooted in real experience — not theory.</span></p>
+        <p><span data-en="Not a generic relocation agent. A former immigrant who learned the hard way – so you don't have to. Navigate bureaucracy, find your perfect home, and embrace Italian culture with real-world guidance." data-it="Non un agente di trasferimento generico. Un ex immigrato che ha imparato nel modo più duro – così tu non devi farlo. Naviga la burocrazia, trova la casa perfetta e abbraccia la cultura italiana con una guida reale." data-fr="Pas un agent de relocation générique. Un ancien immigrant qui a appris à la dure – pour que vous n'ayez pas à le faire. Naviguez dans la bureaucratie, trouvez votre maison idéale et imprégnez-vous de la culture italienne avec des conseils concrets.">Not a generic relocation agent. A former immigrant who learned the hard way – so you don't have to. Navigate bureaucracy, find your perfect home, and embrace Italian culture with real-world guidance.</span></p>
         <a href="#contact" class="btn-primary start-btn" data-en="Start your journey →" data-it="Inizia il tuo viaggio →" data-fr="Commencez votre voyage →">Start your journey →</a>
       </div>
       <div class="hero-image">
@@ -478,7 +520,6 @@
     </div>
   </section>
 
-  <!-- About Section -->
   <section id="about">
     <div class="container">
       <div class="section-title"><span data-en="From immigrant to expert: the story behind Italian Haven" data-it="Da immigrato a esperto: la storia dietro Italian Haven" data-fr="D'immigrant à expert : l'histoire derrière Italian Haven">From immigrant to expert: the story behind Italian Haven</span></div>
@@ -487,7 +528,7 @@
         <div class="about-text">
           <h3><span data-en="Ciao, I'm Yasir." data-it="Ciao, sono Yasir." data-fr="Bonjour, je suis Yasir.">Ciao, I'm Yasir.</span></h3>
           <p><span data-en="Originally from Pakistan, raised and educated in the United Kingdom — graduating from Coventry University — I always felt a magnetic pull toward Italy. After moving here, I spent over 15 years living and working across different Italian regions, from bustling Rome to the serene hills of Tuscany, and now proudly based in Puglia." data-it="Originario del Pakistan, cresciuto e istruito nel Regno Unito — laureato alla Coventry University — ho sempre sentito un'attrazione magnetica verso l'Italia. Dopo essermi trasferito qui, ho trascorso oltre 15 anni vivendo e lavorando in diverse regioni italiane, dalla vivace Roma alle serene colline della Toscana, e ora orgogliosamente basato in Puglia." data-fr="Originaire du Pakistan, élevé et éduqué au Royaume-Uni — diplômé de l'Université de Coventry — j'ai toujours ressenti une attirance magnétique vers l'Italie. Après avoir déménagé ici, j'ai passé plus de 15 ans à vivre et travailler dans différentes régions italiennes, de la Rome animée aux collines sereines de la Toscane, et maintenant fièrement basé dans les Pouilles.">Originally from Pakistan, raised and educated in the United Kingdom — graduating from Coventry University — I always felt a magnetic pull toward Italy. After moving here, I spent over 15 years living and working across different Italian regions, from bustling Rome to the serene hills of Tuscany, and now proudly based in Puglia.</span></p>
-          <p><span data-en="Throughout this journey, I witnessed countless foreigners struggle with Italian bureaucracy, housing hurdles, and cultural adaptation — exactly the same obstacles I faced at the beginning. That frustration fueled my mission: Italian Haven Consultation was born to offer honest, practical, and experienced-based guidance. No sugar-coating, no vague theories — just real solutions." data-it="Durante questo viaggio, ho visto innumerevoli stranieri lottare con la burocrazia italiana, gli ostacoli abitativi e l'adattamento culturale — esattamente gli stessi ostacoli che ho affrontato all'inizio. Quella frustrazione ha alimentato la mia missione: Italian Haven Consultation è nata per offrire una guida onesta, pratica e basata sull'esperienza. Niente zucchero, niente teorie vaghe — solo soluzioni reali." data-fr="Tout au long de ce voyage, j'ai vu d'innombrables étrangers lutter contre la bureaucratie italienne, les obstacles au logement et l'adaptation culturelle — exactement les mêmes obstacles que j'ai rencontrés au début. Cette frustration a alimenté ma mission : Italian Haven Consultation est né pour offrir des conseils honnêtes, pratiques et basés sur l'expérience. Pas de fioritures, pas de théories vagues — que des solutions réelles.">Throughout this journey, I witnessed countless foreigners struggle with Italian bureaucracy, housing hurdles, and cultural adaptation — exactly the same obstacles I faced at the beginning. That frustration fueled my mission: Italian Haven Consultation was born to offer honest, practical, and experienced-based guidance. No sugar-coating, no vague theories — just real solutions.</span></p>
+          <p><span data-en="I remember crying in a Rome immigration office after waiting 7 hours. That won't happen to you – because I'll tell you exactly what to bring, say, and expect. Italian Haven offers honest, practical, and experienced-based guidance. No sugar-coating, no vague theories — just real solutions." data-it="Ricordo di aver pianto in un ufficio immigrazione di Roma dopo aver aspettato 7 ore. Questo non succederà a te – perché ti dirò esattamente cosa portare, dire e aspettarti. Italian Haven offre una guida onesta, pratica e basata sull'esperienza. Niente zucchero, niente teorie vaghe — solo soluzioni reali." data-fr="Je me souviens avoir pleuré dans un bureau d'immigration à Rome après avoir attendu 7 heures. Cela ne vous arrivera pas – car je vous dirai exactement quoi apporter, dire et attendre. Italian Haven offre des conseils honnêtes, pratiques et basés sur l'expérience. Pas de fioritures, pas de théories vagues — que des solutions réelles.">I remember crying in a Rome immigration office after waiting 7 hours. That won't happen to you – because I'll tell you exactly what to bring, say, and expect. Italian Haven offers honest, practical, and experienced-based guidance. No sugar-coating, no vague theories — just real solutions.</span></p>
           <div class="signature">
             <i class="fas fa-quote-left"></i> <span data-en="We help you transform your Italian dream into a secure, joyful reality." data-it="Ti aiutiamo a trasformare il tuo sogno italiano in una realtà sicura e gioiosa." data-fr="Nous vous aidons à transformer votre rêve italien en une réalité sûre et joyeuse.">We help you transform your Italian dream into a secure, joyful reality.</span>
           </div>
@@ -498,122 +539,75 @@
     </div>
   </section>
 
-  <!-- Services Section - WITH TRANSLATION SERVICES -->
   <section id="services" style="background: #faf7f2;">
     <div class="container">
       <div class="section-title"><span data-en="What we offer — Bespoke support for your Italian move" data-it="Cosa offriamo — Supporto su misura per il tuo trasferimento in Italia" data-fr="Ce que nous offrons — Un accompagnement sur mesure pour votre installation en Italie">What we offer — Bespoke support for your Italian move</span></div>
       <div class="section-sub"><span data-en="Tailored, step-by-step consultation from someone who's been exactly where you are." data-it="Consulenza personalizzata passo dopo passo da qualcuno che è stato esattamente dove sei tu." data-fr="Des conseils personnalisés, étape par étape, de la part de quelqu'un qui a été exactement là où vous êtes.">Tailored, step-by-step consultation from someone who's been exactly where you are.</span></div>
       <div class="services-cards">
-        <div class="card">
-          <i class="fas fa-file-alt"></i>
-          <h3><span data-en="Bureaucracy & Visas" data-it="Burocrazia e Visti" data-fr="Bureaucratie & Visas">Bureaucracy & Visas</span></h3>
-          <p><span data-en="Permits, codice fiscale, residence registration — we simplify the red tape." data-it="Permessi, codice fiscale, registrazione di residenza — semplifichiamo la burocrazia." data-fr="Permis, code fiscal, enregistrement de résidence — nous simplifions les formalités.">Permits, codice fiscale, residence registration — we simplify the red tape.</span></p>
-        </div>
-        <div class="card">
-          <i class="fas fa-home"></i>
-          <h3><span data-en="Property & Rental Guidance" data-it="Consulenza Immobiliare e Affitti" data-fr="Conseils pour l'immobilier et la location">Property & Rental Guidance</span></h3>
-          <p><span data-en="Find your safe haven: from lease contracts to purchasing insights." data-it="Trova il tuo porto sicuro: dai contratti di locazione ai consigli per l'acquisto." data-fr="Trouvez votre havre de paix : des contrats de location aux conseils d'achat.">Find your safe haven: from lease contracts to purchasing insights.</span></p>
-        </div>
-        <div class="card">
-          <i class="fas fa-language"></i>
-          <h3><span data-en="Translation Services" data-it="Servizi di Traduzione" data-fr="Services de Traduction">Translation Services</span></h3>
-          <p><span data-en="Professional Italian ↔ English translation for documents, contracts, emails, and legal papers. Accurate, fast, and reliable." data-it="Traduzione professionale Italiano ↔ Inglese per documenti, contratti, email e documenti legali. Precisa, veloce e affidabile." data-fr="Traduction professionnelle Italien ↔ Anglais pour documents, contrats, e-mails et papiers légaux. Précise, rapide et fiable.">Professional Italian ↔ English translation for documents, contracts, emails, and legal papers. Accurate, fast, and reliable.</span></p>
-        </div>
-        <div class="card">
-          <i class="fas fa-utensils"></i>
-          <h3><span data-en="Cultural Integration" data-it="Integrazione Culturale" data-fr="Intégration culturelle">Cultural Integration</span></h3>
-          <p><span data-en="Language tips, local etiquette, and authentic lifestyle immersion." data-it="Consigli linguistici, galateo locale e immersione nello stile di vita autentico." data-fr="Conseils linguistiques, étiquette locale et immersion dans un mode de vie authentique.">Language tips, local etiquette, and authentic lifestyle immersion.</span></p>
-        </div>
-        <div class="card">
-          <i class="fas fa-chalkboard-user"></i>
-          <h3><span data-en="Relocation Roadmap" data-it="Piano di Trasferimento" data-fr="Feuille de route pour le déménagement">Relocation Roadmap</span></h3>
-          <p><span data-en="Personalized checklists & ongoing support until you feel at home." data-it="Liste di controllo personalizzate e supporto continuo fino a quando non ti sentirai a casa." data-fr="Listes de contrôle personnalisées et un accompagnement continu jusqu'à ce que vous vous sentiez chez vous.">Personalized checklists & ongoing support until you feel at home.</span></p>
-        </div>
+        <div class="card"><i class="fas fa-file-alt"></i><h3>Bureaucracy & Visas</h3><p>Permits, codice fiscale, residence registration — we simplify the red tape.</p><span class="benefit">✓ Avoid 6-month delays – get it right first time.</span></div>
+        <div class="card"><i class="fas fa-home"></i><h3>Property & Rental Guidance</h3><p>Find your safe haven: from lease contracts to purchasing insights.</p><span class="benefit">✓ Don’t get trapped by bad contracts or hidden fees.</span></div>
+        <div class="card"><i class="fas fa-language"></i><h3>Translation Services</h3><p>Professional Italian ↔ English translation for documents, contracts, emails, and legal papers.</p><span class="benefit">✓ Legally sound, culturally aware – not just word-for-word.</span></div>
+        <div class="card"><i class="fas fa-utensils"></i><h3>Cultural Integration</h3><p>Language tips, local etiquette, and authentic lifestyle immersion.</p><span class="benefit">✓ Fit in faster. Avoid awkward mistakes Italians never tell you about.</span></div>
+        <div class="card"><i class="fas fa-chalkboard-user"></i><h3>Relocation Roadmap</h3><p>Personalized checklists & ongoing support until you feel at home.</p><span class="benefit">✓ From ‘scared’ to settled – with one person guiding you.</span></div>
       </div>
     </div>
   </section>
 
-  <!-- Gallery Section - YOUR HIGH-QUALITY PUGLIA PHOTOS from ImgBB -->
   <section id="gallery">
     <div class="container">
       <div class="section-title"><span data-en="Discover Puglia — where I call home" data-it="Scopri la Puglia — dove chiamo casa" data-fr="Découvrez les Pouilles — là où j'appelle maison">Discover Puglia — where I call home</span></div>
       <div class="section-sub"><span data-en="Explore the whitewashed streets, trulli, and Baroque beauty of Southern Italy" data-it="Esplora le strade imbiancate, i trulli e la bellezza barocca del Sud Italia" data-fr="Explorez les rues blanchies à la chaux, les trulli et la beauté baroque du sud de l'Italie">Explore the whitewashed streets, trulli, and Baroque beauty of Southern Italy</span></div>
       <div class="gallery">
-        <div class="gallery-item">
-          <img src="https://i.ibb.co/1Gszcx9x/alberobello.jpg" alt="Alberobello Trulli" loading="lazy">
-          <div class="caption">🏡 Alberobello — Trulli Houses</div>
-        </div>
-        <div class="gallery-item">
-          <img src="https://i.ibb.co/BHy9Jt9q/cisternino.jpg" alt="Cisternino old town" loading="lazy">
-          <div class="caption">🏘️ Cisternino — Whitewashed Charm</div>
-        </div>
-        <div class="gallery-item">
-          <img src="https://i.ibb.co/TBXfywb6/cisternino-2.jpg" alt="Cisternino alley" loading="lazy">
-          <div class="caption">✨ Cisternino — Authentic Itria Valley</div>
-        </div>
-        <div class="gallery-item">
-          <img src="https://i.ibb.co/fG16Wz6h/fasano.jpg" alt="Fasano historic center" loading="lazy">
-          <div class="caption">🌳 Fasano — Historic Charm</div>
-        </div>
-        <div class="gallery-item">
-          <img src="https://i.ibb.co/Kc9BtB3f/fasano-2.jpg" alt="Fasano countryside" loading="lazy">
-          <div class="caption">🌿 Fasano — Nature & Tranquility</div>
-        </div>
-        <div class="gallery-item">
-          <img src="https://i.ibb.co/6cwxbJ64/lecce.jpg" alt="Lecce Baroque architecture" loading="lazy">
-          <div class="caption">🏛️ Lecce — Florence of the South</div>
-        </div>
-        <div class="gallery-item">
-          <img src="https://i.ibb.co/G3cHfKtX/lecce-1.jpg" alt="Lecce cathedral" loading="lazy">
-          <div class="caption">⛪ Lecce — Baroque Masterpiece</div>
-        </div>
-        <div class="gallery-item">
-          <img src="https://i.ibb.co/kVvpDbDW/ostuni.jpg" alt="Ostuni white city" loading="lazy">
-          <div class="caption">🤍 Ostuni — The White City</div>
-        </div>
-        <div class="gallery-item">
-          <img src="https://i.ibb.co/4gP4h5sR/ostuni2.jpg" alt="Ostuni panoramic view" loading="lazy">
-          <div class="caption">🌅 Ostuni — Panoramic Views</div>
-        </div>
+        <div class="gallery-item"><img src="https://i.ibb.co/1Gszcx9x/alberobello.jpg" alt="Alberobello Trulli" loading="lazy"><div class="caption">🏡 Alberobello — Trulli Houses</div></div>
+        <div class="gallery-item"><img src="https://i.ibb.co/BHy9Jt9q/cisternino.jpg" alt="Cisternino old town" loading="lazy"><div class="caption">🏘️ Cisternino — Whitewashed Charm</div></div>
+        <div class="gallery-item"><img src="https://i.ibb.co/TBXfywb6/cisternino-2.jpg" alt="Cisternino alley" loading="lazy"><div class="caption">✨ Cisternino — Authentic Itria Valley</div></div>
+        <div class="gallery-item"><img src="https://i.ibb.co/fG16Wz6h/fasano.jpg" alt="Fasano historic center" loading="lazy"><div class="caption">🌳 Fasano — Historic Charm</div></div>
+        <div class="gallery-item"><img src="https://i.ibb.co/Kc9BtB3f/fasano-2.jpg" alt="Fasano countryside" loading="lazy"><div class="caption">🌿 Fasano — Nature & Tranquility</div></div>
+        <div class="gallery-item"><img src="https://i.ibb.co/6cwxbJ64/lecce.jpg" alt="Lecce Baroque architecture" loading="lazy"><div class="caption">🏛️ Lecce — Florence of the South</div></div>
+        <div class="gallery-item"><img src="https://i.ibb.co/G3cHfKtX/lecce-1.jpg" alt="Lecce cathedral" loading="lazy"><div class="caption">⛪ Lecce — Baroque Masterpiece</div></div>
+        <div class="gallery-item"><img src="https://i.ibb.co/kVvpDbDW/ostuni.jpg" alt="Ostuni white city" loading="lazy"><div class="caption">🤍 Ostuni — The White City</div></div>
+        <div class="gallery-item"><img src="https://i.ibb.co/4gP4h5sR/ostuni2.jpg" alt="Ostuni panoramic view" loading="lazy"><div class="caption">🌅 Ostuni — Panoramic Views</div></div>
       </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
   <div class="container">
     <div class="cta">
       <h2><span data-en="Over 15 years living & working in Italy — firsthand expertise" data-it="Oltre 15 anni vissuti e lavorati in Italia — competenza diretta" data-fr="Plus de 15 ans à vivre et travailler en Italie — une expertise de première main">Over 15 years living & working in Italy — firsthand expertise</span></h2>
       <p style="max-width: 650px; margin: 0 auto 28px auto;"><span data-en="I know the real challenges because I lived them. From opening a bank account to securing a lease in Rome, I'll be your cultural compass." data-it="Conosco le vere sfide perché le ho vissute. Dall'apertura di un conto bancario alla stipula di un contratto di locazione a Roma, sarò la tua bussola culturale." data-fr="Je connais les vrais défis parce que je les ai vécus. De l'ouverture d'un compte bancaire à la signature d'un bail à Rome, je serai votre boussole culturelle.">I know the real challenges because I lived them. From opening a bank account to securing a lease in Rome, I'll be your cultural compass.</span></p>
-      <i class="fas fa-handshake" style="font-size: 2rem; color: #c97e2a; margin-bottom: 16px; display: inline-block;"></i>
-      <div><a href="#contact" class="btn-primary cta-btn" data-en="Let's talk about your Italian dream" data-it="Parliamo del tuo sogno italiano" data-fr="Parlons de votre rêve italien">Let's talk about your Italian dream</a></div>
+      <div class="guarantee-badge"><i class="fas fa-shield-alt"></i> <span data-en="100% clarity guarantee: If after our first call you don't feel more confident, I'll refund your consultation fee." data-it="Garanzia di chiarezza al 100%: se dopo la prima chiamata non ti senti più sicuro, ti rimborso la consulenza." data-fr="Garantie de clarté à 100% : si après notre premier appel vous ne vous sentez pas plus confiant, je vous rembourse les frais de consultation.">100% clarity guarantee: If after our first call you don't feel more confident, I'll refund your consultation fee.</span></div>
+      <div style="margin-top: 28px;"><a href="#contact" class="btn-primary cta-btn" data-en="Book your 20-min discovery call – free" data-it="Prenota la tua chiamata conoscitiva di 20 min – gratuita" data-fr="Réservez votre appel découverte de 20 min – gratuit">Book your 20-min discovery call – free</a></div>
     </div>
   </div>
 
-  <!-- Contact Section -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-title"><span data-en="Frequently asked questions" data-it="Domande frequenti" data-fr="Foire aux questions">Frequently asked questions</span></div>
+      <div class="faq-item"><div class="faq-question">📄 <span data-en="Do I need a visa to rent long-term in Italy?" data-it="Ho bisogno di un visto per affittare a lungo termine in Italia?" data-fr="Ai-je besoin d'un visa pour louer à long terme en Italie ?">Do I need a visa to rent long-term in Italy?</span> <i class="fas fa-chevron-down"></i></div><div class="faq-answer"><span data-en="Generally, non-EU citizens need a valid permit (residence or visa). I'll guide you based on your specific nationality and situation." data-it="Generalmente, i cittadini non UE hanno bisogno di un permesso valido (residenza o visto). Ti guiderò in base alla tua nazionalità e situazione specifica." data-fr="En général, les citoyens non européens ont besoin d'un permis valide (résidence ou visa). Je vous guiderai en fonction de votre nationalité et de votre situation.">Generally, non-EU citizens need a valid permit (residence or visa). I'll guide you based on your specific nationality and situation.</span></div></div>
+      <div class="faq-item"><div class="faq-question">⚡ <span data-en="How fast can you help with a codice fiscale?" data-it="Quanto velocemente puoi aiutarmi con il codice fiscale?" data-fr="À quelle vitesse pouvez-vous m'aider avec un code fiscal ?">How fast can you help with a codice fiscale?</span> <i class="fas fa-chevron-down"></i></div><div class="faq-answer"><span data-en="Within 24-48 hours, I provide the exact documents and steps. You can often get it within a week, sometimes same day at the agency." data-it="Entro 24-48 ore fornisco i documenti e i passaggi esatti. Spesso puoi ottenerlo entro una settimana, a volte lo stesso giorno all'agenzia." data-fr="Dans les 24 à 48 heures, je fournis les documents et les étapes exacts. Vous pouvez souvent l'obtenir en une semaine, parfois le jour même à l'agence.">Within 24-48 hours, I provide the exact documents and steps. You can often get it within a week, sometimes same day at the agency.</span></div></div>
+      <div class="faq-item"><div class="faq-question">🌍 <span data-en="Do you only work with people moving to Puglia?" data-it="Lavori solo con persone che si trasferiscono in Puglia?" data-fr="Travaillez-vous uniquement avec des personnes qui déménagent dans les Pouilles ?">Do you only work with people moving to Puglia?</span> <i class="fas fa-chevron-down"></i></div><div class="faq-answer"><span data-en="Not at all. I offer remote consultations worldwide and have experience across Italy – Rome, Tuscany, Lombardy, and more." data-it="Affatto. Offro consulenze a distanza in tutto il mondo e ho esperienza in tutta Italia – Roma, Toscana, Lombardia e oltre." data-fr="Pas du tout. Je propose des consultations à distance dans le monde entier et j'ai de l'expérience dans toute l'Italie – Rome, Toscane, Lombardie et au-delà.">Not at all. I offer remote consultations worldwide and have experience across Italy – Rome, Tuscany, Lombardy, and more.</span></div></div>
+    </div>
+  </section>
+
   <section id="contact">
     <div class="container">
       <div class="section-title"><span data-en="Get in touch — Your first consultation is just a click away" data-it="Contattaci — La tua prima consulenza è a un clic di distanza" data-fr="Contactez-nous — Votre première consultation est à un clic">Get in touch — Your first consultation is just a click away</span></div>
-      <div class="section-sub"><span data-en="Ready to take the leap? Share your questions, and we'll respond within 24 hours." data-it="Pronto a fare il grande passo? Condividi le tue domande, ti risponderemo entro 24 ore." data-fr="Prêt à faire le grand saut ? Partagez vos questions, nous vous répondrons sous 24 heures.">Ready to take the leap? Share your questions, and we'll respond within 24 hours.</span></div>
+      <div class="section-sub"><span data-en="Ask me anything about moving to Italy – I reply personally within hours, not days." data-it="Chiedimi qualsiasi cosa sul trasferimento in Italia – rispondo personalmente in poche ore, non giorni." data-fr="Demandez-moi n'importe quoi sur l'installation en Italie – je réponds personnellement en quelques heures, pas en jours.">Ask me anything about moving to Italy – I reply personally within hours, not days.</span></div>
       <div style="display: flex; flex-wrap: wrap; gap: 48px; margin-top: 20px;">
         <div style="flex: 1; min-width: 240px;">
           <h3><i class="fas fa-envelope"></i> <span data-en="Reach out directly" data-it="Contattaci direttamente" data-fr="Contactez-nous directement">Reach out directly</span></h3>
           <p style="margin: 16px 0;"><i class="fab fa-whatsapp"></i> WhatsApp: <strong>+39 351 057 8614</strong></p>
           <p><i class="fas fa-envelope"></i> Email: <strong>mumtaz.yasir.m@gmail.com</strong></p>
           <p style="margin-top: 12px;"><i class="fas fa-map-marker-alt"></i> <span data-en="Based in Puglia, Italy — remote consultations worldwide." data-it="Basato in Puglia, Italia — consulenze remote in tutto il mondo." data-fr="Basé dans les Pouilles, en Italie — consultations à distance dans le monde entier.">Based in Puglia, Italy — remote consultations worldwide.</span></p>
-          <div class="social" style="margin-top: 32px;">
-            <i class="fab fa-instagram"></i> <i class="fab fa-facebook"></i> <i class="fab fa-linkedin"></i>
-          </div>
+          <div class="social" style="margin-top: 32px;"><i class="fab fa-instagram"></i> <i class="fab fa-facebook"></i> <i class="fab fa-linkedin"></i></div>
         </div>
         <div style="flex: 2; min-width: 280px;">
           <form action="#" method="post" style="display: flex; flex-direction: column; gap: 20px;">
-            <div style="display: flex; gap: 16px; flex-wrap: wrap;">
-              <input type="text" placeholder="Your name" style="flex:1; padding: 14px 18px; border-radius: 48px; border: 1px solid #e0cfbe; background: white; font-family: inherit;">
-              <input type="email" placeholder="Email address" style="flex:1; padding: 14px 18px; border-radius: 48px; border: 1px solid #e0cfbe; background: white; font-family: inherit;">
-            </div>
+            <div style="display: flex; gap: 16px; flex-wrap: wrap;"><input type="text" placeholder="Your name" style="flex:1; padding: 14px 18px; border-radius: 48px; border: 1px solid #e0cfbe; background: white; font-family: inherit;"><input type="email" placeholder="Email address" style="flex:1; padding: 14px 18px; border-radius: 48px; border: 1px solid #e0cfbe; background: white; font-family: inherit;"></div>
             <textarea rows="4" placeholder="Tell me about your Italian moving plans or questions..." style="padding: 16px; border-radius: 28px; border: 1px solid #e0cfbe; font-family: inherit; resize: vertical;"></textarea>
-            <button type="submit" class="btn-primary" style="width: fit-content; border: none;"><span data-en="Send message" data-it="Invia messaggio" data-fr="Envoyer le message">Send message</span> <i class="fas fa-paper-plane"></i></button>
+            <button type="submit" class="btn-primary" style="width: fit-content; border: none;"><span data-en="Send message – free consult" data-it="Invia messaggio – consulenza gratuita" data-fr="Envoyer le message – consultation gratuite">Send message – free consult</span> <i class="fas fa-paper-plane"></i></button>
           </form>
-          <p style="font-size: 0.8rem; margin-top: 16px; color: #7a6a58;"><i class="fas fa-lock"></i> <span data-en="Your info is safe. We respond personally within 24h." data-it="Le tue informazioni sono al sicuro. Rispondiamo personalmente entro 24 ore." data-fr="Vos informations sont en sécurité. Nous répondons personnellement sous 24h.">Your info is safe. We respond personally within 24h.</span></p>
+          <p style="font-size: 0.8rem; margin-top: 16px; color: #7a6a58;"><i class="fas fa-lock"></i> <span data-en="Your info is safe. I respond personally within 24h." data-it="Le tue informazioni sono al sicuro. Rispondo personalmente entro 24 ore." data-fr="Vos informations sont en sécurité. Je réponds personnellement sous 24h.">Your info is safe. I respond personally within 24h.</span></p>
         </div>
       </div>
     </div>
@@ -623,110 +617,46 @@
 <footer>
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-col">
-        <h4>Italian Haven Consultation</h4>
-        <p><span data-en="Experience-driven guidance for your Italian journey. Founded by Yasir, with over 15 years of local insight, now serving you from Puglia." data-it="Guida basata sull'esperienza per il tuo viaggio italiano. Fondato da Yasir, con oltre 15 anni di conoscenza locale, ora ti serve dalla Puglia." data-fr="Des conseils basés sur l'expérience pour votre voyage en Italie. Fondé par Yasir, avec plus de 15 ans de connaissance locale, vous servant désormais des Pouilles.">Experience-driven guidance for your Italian journey. Founded by Yasir, with over 15 years of local insight, now serving you from Puglia.</span></p>
-      </div>
-      <div class="footer-col">
-        <h4><span data-en="Explore" data-it="Esplora" data-fr="Explorer">Explore</span></h4>
-        <p><a href="#about" data-en="Our story" data-it="La nostra storia" data-fr="Notre histoire">Our story</a></p>
-        <p><a href="#services" data-en="Services" data-it="Servizi" data-fr="Services">Services</a></p>
-        <p><a href="#gallery" data-en="Gallery" data-it="Galleria" data-fr="Galerie">Gallery</a></p>
-      </div>
-      <div class="footer-col">
-        <h4><span data-en="Legal" data-it="Legale" data-fr="Juridique">Legal</span></h4>
-        <p><span data-en="Privacy Policy" data-it="Informativa sulla privacy" data-fr="Politique de confidentialité">Privacy Policy</span></p>
-        <p><span data-en="Terms of Consultation" data-it="Termini di consulenza" data-fr="Conditions de consultation">Terms of Consultation</span></p>
-        <p>© 2025 — <span data-en="All rights reserved" data-it="Tutti i diritti riservati" data-fr="Tous droits réservés">All rights reserved</span></p>
-      </div>
+      <div class="footer-col"><h4>Italian Haven Consultation</h4><p>Experience-driven guidance for your Italian journey. Founded by Yasir, with over 15 years of local insight, now serving you from Puglia.</p></div>
+      <div class="footer-col"><h4>Explore</h4><p><a href="#about">Our story</a></p><p><a href="#services">Services</a></p><p><a href="#gallery">Gallery</a></p><p><a href="#faq">FAQ</a></p></div>
+      <div class="footer-col"><h4>Legal</h4><p>Privacy Policy</p><p>Terms of Consultation</p><p>© 2025 — All rights reserved</p></div>
     </div>
-    <div class="copyright">
-      <i class="fas fa-heart" style="color:#c97e2a;"></i> <span data-en="Built with passion for those who dream of Italy — real support, real results." data-it="Costruito con passione per coloro che sognano l'Italia — supporto reale, risultati reali." data-fr="Construit avec passion pour ceux qui rêvent de l'Italie — un vrai soutien, de vrais résultats.">Built with passion for those who dream of Italy — real support, real results.</span>
-    </div>
+    <div class="copyright"><i class="fas fa-heart" style="color:#c97e2a;"></i> Built with passion for those who dream of Italy — real support, real results.</div>
   </div>
 </footer>
 
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/393510578614?text=Hello%20Yasir%2C%20I%27m%20interested%20in%20Italian%20Haven%20Consultation.%20Can%20we%20chat%3F" 
-   class="whatsapp-float" 
-   target="_blank" 
-   rel="noopener noreferrer">
-  <i class="fab fa-whatsapp"></i> 
-  <span data-en="Chat on WhatsApp" data-it="Chatta su WhatsApp" data-fr="Discuter sur WhatsApp">Chat on WhatsApp</span>
-</a>
+<a href="https://wa.me/393510578614?text=Hello%20Yasir%2C%20I%27m%20interested%20in%20Italian%20Haven%20Consultation.%20Can%20we%20chat%3F" class="whatsapp-float" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> <span data-en="Chat on WhatsApp" data-it="Chatta su WhatsApp" data-fr="Discuter sur WhatsApp">Chat on WhatsApp</span></a>
 
 <script>
-  // Language Toggle Functionality
   let currentLang = 'en';
-  
   function switchLanguage(lang) {
     currentLang = lang;
-    
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      if (btn.getAttribute('data-lang') === lang) {
-        btn.classList.add('active');
-      } else {
-        btn.classList.remove('active');
-      }
-    });
-    
+    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.getAttribute('data-lang') === lang));
     document.querySelectorAll('[data-en]').forEach(el => {
       if (el.getAttribute(`data-${lang}`)) {
-        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-          el.placeholder = el.getAttribute(`data-${lang}`);
-        } else {
-          el.innerHTML = el.getAttribute(`data-${lang}`);
-        }
+        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') el.placeholder = el.getAttribute(`data-${lang}`);
+        else el.innerHTML = el.getAttribute(`data-${lang}`);
       }
     });
-    
     const nameInput = document.querySelector('input[placeholder="Your name"]');
     const emailInput = document.querySelector('input[placeholder="Email address"]');
     const textarea = document.querySelector('textarea');
-    
-    if (nameInput) {
-      nameInput.placeholder = lang === 'en' ? 'Your name' : (lang === 'it' ? 'Il tuo nome' : 'Votre nom');
-    }
-    if (emailInput) {
-      emailInput.placeholder = lang === 'en' ? 'Email address' : (lang === 'it' ? 'Indirizzo email' : 'Adresse e-mail');
-    }
-    if (textarea) {
-      textarea.placeholder = lang === 'en' ? 'Tell me about your Italian moving plans or questions...' : 
-                             (lang === 'it' ? 'Parlami dei tuoi piani di trasferimento in Italia o delle tue domande...' : 
-                              'Parlez-moi de vos projets de déménagement en Italie ou de vos questions...');
-    }
+    if(nameInput) nameInput.placeholder = lang === 'en' ? 'Your name' : (lang === 'it' ? 'Il tuo nome' : 'Votre nom');
+    if(emailInput) emailInput.placeholder = lang === 'en' ? 'Email address' : (lang === 'it' ? 'Indirizzo email' : 'Adresse e-mail');
+    if(textarea) textarea.placeholder = lang === 'en' ? 'Tell me about your Italian moving plans or questions...' : (lang === 'it' ? 'Parlami dei tuoi piani di trasferimento in Italia o delle tue domande...' : 'Parlez-moi de vos projets de déménagement en Italie ou de vos questions...');
   }
-  
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      switchLanguage(btn.getAttribute('data-lang'));
-    });
+  document.querySelectorAll('.lang-btn').forEach(btn => btn.addEventListener('click', () => switchLanguage(btn.getAttribute('data-lang'))));
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => anchor.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href === "#" || href === "") return;
+    const target = document.querySelector(href);
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  }));
+  document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => { q.nextElementSibling.classList.toggle('show'); });
   });
-  
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if (href === "#" || href === "") return;
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
-  
   const form = document.querySelector('form');
-  if(form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const successMsg = currentLang === 'en' ? '✨ Thank you! Yasir will reply within 24 hours.' :
-                         (currentLang === 'it' ? '✨ Grazie! Yasir risponderà entro 24 ore.' : 
-                          '✨ Merci ! Yasir vous répondra dans les 24 heures.');
-      alert(successMsg);
-      form.reset();
-    });
-  }
+  if(form) form.addEventListener('submit', (e) => { e.preventDefault(); alert(currentLang === 'en' ? '✨ Thank you! Yasir will reply within 24 hours.' : (currentLang === 'it' ? '✨ Grazie! Yasir risponderà entro 24 ore.' : '✨ Merci ! Yasir vous répondra dans les 24 heures.')); form.reset(); });
 </script>
-
 </body>
 </html>
