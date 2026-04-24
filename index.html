@@ -9,8 +9,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
   <style>
-    /* Photo placeholder - Replace URL with your actual photo */
+    /* Apulian Colour Palette */
     :root {
+      --puglia-terracotta: #D96C2B;
+      --puglia-olive: #6B7F3A;
+      --puglia-sea: #2B7A8A;
+      --puglia-cream: #FEF7E8;
+      --puglia-warm-cream: #FFF9EF;
+      --puglia-charcoal: #2E241F;
+      --puglia-bougainvillea: #D45C6F;
+      --puglia-sunset-gradient: linear-gradient(135deg, #FDE8CD 0%, #FEF2E4 100%);
+      --puglia-footer: #2A3B2C;
       --yasir-photo-url: url('https://i.imgur.com/e8JL2EY.jpeg');
     }
     
@@ -22,8 +31,8 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #fefcf8;
-      color: #1e2a2f;
+      background-color: var(--puglia-cream);
+      color: var(--puglia-charcoal);
       line-height: 1.5;
       scroll-behavior: smooth;
     }
@@ -36,7 +45,7 @@
 
     /* Language Toggle Bar */
     .lang-bar {
-      background: #1e2a2f;
+      background: var(--puglia-footer);
       padding: 10px 0;
       text-align: center;
       position: sticky;
@@ -56,19 +65,19 @@
       font-size: 0.85rem;
     }
     .lang-btn:hover, .lang-btn.active {
-      background: #c97e2a;
-      border-color: #c97e2a;
+      background: var(--puglia-terracotta);
+      border-color: var(--puglia-terracotta);
       color: white;
     }
 
     header {
-      background: #ffffff;
+      background: var(--puglia-warm-cream);
       box-shadow: 0 8px 20px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.05);
       position: sticky;
       top: 48px;
       z-index: 100;
       backdrop-filter: blur(2px);
-      background: rgba(255,255,245,0.96);
+      background: rgba(255,249,239,0.96);
     }
 
     nav {
@@ -83,14 +92,14 @@
       font-size: 1.7rem;
       font-weight: 700;
       letter-spacing: -0.3px;
-      background: linear-gradient(135deg, #b8860b, #8b5a2b);
+      background: linear-gradient(135deg, var(--puglia-terracotta), var(--puglia-olive));
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
     }
     .logo p {
       font-size: 0.8rem;
-      color: #7a5a3a;
+      color: #8B7355;
       letter-spacing: 0.5px;
     }
 
@@ -102,30 +111,31 @@
     .nav-links a {
       text-decoration: none;
       font-weight: 500;
-      color: #2c3e2f;
+      color: var(--puglia-charcoal);
       transition: 0.2s;
     }
     .nav-links a:hover {
-      color: #c97e2a;
+      color: var(--puglia-terracotta);
     }
 
     .btn-primary {
-      background: #c97e2a;
+      background: var(--puglia-terracotta);
       border: none;
       color: white;
       padding: 12px 28px;
-      border-radius: 40px;
+      border-radius: 50px;
       font-weight: 600;
       font-size: 0.9rem;
       cursor: pointer;
       transition: 0.2s;
       display: inline-block;
       text-decoration: none;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 12px rgba(217,108,43,0.25);
     }
     .btn-primary:hover {
-      background: #a8631f;
+      background: #b8541a;
       transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(217,108,43,0.35);
     }
 
     .hero {
@@ -139,8 +149,8 @@
       flex: 1.2;
     }
     .hero-badge {
-      background: #f5e7d9;
-      color: #b3621a;
+      background: rgba(107,127,58,0.12);
+      color: var(--puglia-olive);
       padding: 6px 14px;
       border-radius: 40px;
       font-size: 0.8rem;
@@ -153,11 +163,11 @@
       font-weight: 700;
       line-height: 1.2;
       margin-bottom: 24px;
-      color: #2c3e2f;
+      color: var(--puglia-charcoal);
     }
     .hero-content p {
       font-size: 1.1rem;
-      color: #3f5446;
+      color: #5A4A3A;
       margin-bottom: 32px;
     }
     .hero-image {
@@ -165,6 +175,17 @@
       border-radius: 32px;
       overflow: hidden;
       box-shadow: 0 20px 35px -12px rgba(0,0,0,0.2);
+      position: relative;
+    }
+    .hero-image::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(217,108,43,0.08), rgba(107,127,58,0.12));
+      pointer-events: none;
     }
     .hero-image img {
       width: 100%;
@@ -184,13 +205,20 @@
       font-size: 2.2rem;
       font-weight: 700;
       margin-bottom: 20px;
-      color: #2c3e2f;
+      color: var(--puglia-charcoal);
+    }
+    .section-title::after {
+      content: '✦';
+      display: block;
+      font-size: 1.2rem;
+      color: var(--puglia-bougainvillea);
+      margin-top: 8px;
     }
     .section-sub {
       text-align: center;
       max-width: 700px;
       margin: 0 auto 48px auto;
-      color: #5c6e5a;
+      color: #6B5A4A;
       font-size: 1.1rem;
     }
 
@@ -207,18 +235,20 @@
       font-size: 1.8rem;
       margin-bottom: 20px;
       font-weight: 600;
+      color: var(--puglia-olive);
     }
     .about-text p {
       margin-bottom: 20px;
       font-size: 1rem;
-      color: #2c3e2f;
+      color: #4A3E35;
     }
     .signature {
       font-style: italic;
       margin-top: 16px;
-      border-left: 4px solid #c97e2a;
+      border-left: 4px solid var(--puglia-terracotta);
       padding-left: 20px;
       font-weight: 500;
+      color: var(--puglia-olive);
     }
     .about-image {
       flex: 1;
@@ -249,28 +279,30 @@
       transition: all 0.2s ease;
       box-shadow: 0 8px 20px rgba(0,0,0,0.03);
       border: 1px solid #f0e4d4;
+      background: var(--puglia-warm-cream);
     }
     .card:hover {
       transform: translateY(-6px);
       box-shadow: 0 20px 30px -12px rgba(0,0,0,0.12);
-      border-color: #e4cfb5;
+      border-color: var(--puglia-terracotta);
     }
     .card i {
       font-size: 2.8rem;
-      color: #c97e2a;
+      color: var(--puglia-terracotta);
       margin-bottom: 20px;
     }
     .card h3 {
       font-size: 1.4rem;
       margin-bottom: 12px;
+      color: var(--puglia-charcoal);
     }
     .card p {
-      color: #4d5f4a;
+      color: #6B5A4A;
       font-size: 0.95rem;
     }
     .card .benefit {
       font-size: 0.8rem;
-      color: #b3621a;
+      color: var(--puglia-olive);
       margin-top: 12px;
       font-weight: 500;
       display: block;
@@ -290,7 +322,7 @@
       overflow: hidden;
       box-shadow: 0 12px 22px -8px rgba(0,0,0,0.12);
       transition: 0.2s;
-      background: #fff4ea;
+      background: var(--puglia-warm-cream);
     }
     .gallery-item img {
       width: 100%;
@@ -308,34 +340,38 @@
       text-align: center;
       font-weight: 600;
       background: white;
-      color: #2c3e2f;
+      color: var(--puglia-charcoal);
+      background: var(--puglia-warm-cream);
     }
 
     .cta {
-      background: linear-gradient(135deg, #f9f1e7, #fff7ef);
+      background: var(--puglia-sunset-gradient);
       border-radius: 48px;
       text-align: center;
       padding: 60px 32px;
       margin: 40px 0;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
     }
     .cta h2 {
       font-size: 2rem;
       margin-bottom: 20px;
+      color: var(--puglia-charcoal);
     }
     .cta .btn-primary {
       font-size: 1.1rem;
       padding: 14px 38px;
     }
     .guarantee-badge {
-      background: #ffffffcc;
+      background: rgba(217,108,43,0.12);
       backdrop-filter: blur(4px);
       display: inline-block;
-      padding: 6px 16px;
+      padding: 8px 20px;
       border-radius: 60px;
       font-size: 0.8rem;
       margin-top: 20px;
       font-weight: 600;
-      color: #2c5a2a;
+      color: var(--puglia-olive);
+      border: 1px solid rgba(107,127,58,0.3);
     }
 
     .whatsapp-float {
@@ -366,8 +402,8 @@
     }
 
     footer {
-      background: #1e2a2f;
-      color: #ddd9ce;
+      background: var(--puglia-footer);
+      color: #DDD2C0;
       padding: 48px 0 24px;
     }
     .footer-grid {
@@ -378,45 +414,46 @@
       margin-bottom: 40px;
     }
     .footer-col h4 {
-      color: #eacc9c;
+      color: #C9A87C;
       margin-bottom: 16px;
     }
     .footer-col p, .footer-col i {
       margin: 8px 0;
     }
     .footer-col a {
-      color: #ddd9ce;
+      color: #DDD2C0;
       text-decoration: none;
     }
     .footer-col a:hover {
-      color: #eacc9c;
+      color: var(--puglia-terracotta);
     }
     .social i {
       font-size: 1.4rem;
       margin-right: 16px;
-      color: #eacc9c;
+      color: #C9A87C;
       transition: 0.2s;
       cursor: pointer;
     }
     .social i:hover {
-      color: white;
+      color: var(--puglia-bougainvillea);
     }
     .copyright {
       text-align: center;
       padding-top: 24px;
-      border-top: 1px solid #3e4e48;
+      border-top: 1px solid #4A5A3C;
       font-size: 0.8rem;
     }
     .location-badge {
-      background: #e9dfd1;
+      background: rgba(217,108,43,0.12);
       display: inline-block;
       padding: 4px 12px;
       border-radius: 30px;
       font-size: 0.8rem;
       margin-top: 8px;
+      color: var(--puglia-terracotta);
     }
     .faq-item {
-      background: white;
+      background: var(--puglia-warm-cream);
       border-radius: 20px;
       padding: 18px 24px;
       margin-bottom: 12px;
@@ -430,10 +467,14 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      color: var(--puglia-olive);
+    }
+    .faq-question i {
+      color: var(--puglia-terracotta);
     }
     .faq-answer {
       margin-top: 12px;
-      color: #4d5f4a;
+      color: #6B5A4A;
       font-size: 0.9rem;
       display: none;
     }
@@ -539,7 +580,7 @@
     </div>
   </section>
 
-  <section id="services" style="background: #faf7f2;">
+  <section id="services" style="background: rgba(107,127,58,0.05);">
     <div class="container">
       <div class="section-title"><span data-en="What we offer — Bespoke support for your Italian move" data-it="Cosa offriamo — Supporto su misura per il tuo trasferimento in Italia" data-fr="Ce que nous offrons — Un accompagnement sur mesure pour votre installation en Italie">What we offer — Bespoke support for your Italian move</span></div>
       <div class="section-sub"><span data-en="Tailored, step-by-step consultation from someone who's been exactly where you are." data-it="Consulenza personalizzata passo dopo passo da qualcuno che è stato esattamente dove sei tu." data-fr="Des conseils personnalisés, étape par étape, de la part de quelqu'un qui a été exactement là où vous êtes.">Tailored, step-by-step consultation from someone who's been exactly where you are.</span></div>
@@ -621,7 +662,7 @@
       <div class="footer-col"><h4>Explore</h4><p><a href="#about">Our story</a></p><p><a href="#services">Services</a></p><p><a href="#gallery">Gallery</a></p><p><a href="#faq">FAQ</a></p></div>
       <div class="footer-col"><h4>Legal</h4><p>Privacy Policy</p><p>Terms of Consultation</p><p>© 2025 — All rights reserved</p></div>
     </div>
-    <div class="copyright"><i class="fas fa-heart" style="color:#c97e2a;"></i> Built with passion for those who dream of Italy — real support, real results.</div>
+    <div class="copyright"><i class="fas fa-heart" style="color:#D45C6F;"></i> Built with passion for those who dream of Italy — real support, real results.</div>
   </div>
 </footer>
 
